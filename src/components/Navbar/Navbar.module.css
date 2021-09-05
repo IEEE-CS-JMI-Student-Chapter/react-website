@@ -1,0 +1,23 @@
+:root {
+  --grey: #2a333d;
+  --white: #fff;
+  --white-bg: #f4f4f4;
+  --orange: #ffa236;
+}
+
+.nav-container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: -webkit-fill-available;
+  background-color: var(--grey);
+  z-index: 100;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.nav-links {
+  display: flex;
+
+  height: 100%;
+}

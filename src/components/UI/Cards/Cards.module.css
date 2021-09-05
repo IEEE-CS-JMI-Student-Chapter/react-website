@@ -1,0 +1,14 @@
+:root {
+    --grey: #2a333d;
+    --white: #fff;
+    --white-bg: #f4f4f4;
+    --orange: #ffa236;
+  }
+
+.landing-card {
+  background-color: var(--gray);
+  /* for testing */
+  /* height: 300px;
+  width: -webkit-fill-available; */
+  /* ******** */
+}
