@@ -18,6 +18,6 @@
 
 .nav-links {
   display: flex;
-
+  margin-right: 5ch;
   height: 100%;
 }

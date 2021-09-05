@@ -10,7 +10,7 @@ const NavItemLink = styled(NavLink)`
   height: calc(100%-5px);
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 1.5rem;
   border-bottom: 5px solid transparent;
   transition: all 0.3s ease-in-out;
   &:hover {
