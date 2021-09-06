@@ -49,7 +49,7 @@ const Navbar = () => {
         <NavActive right={pos.right} width={pos.width} styles={{right: {pos}}}/>
         {NavInfo.map((item, index) => {
           return(
-            <NavItem key={index} innerRef ={index == Click? Buttonref : null} to={item.to} onClick={(e) => setactive(e,index)}>
+            <NavItem key={index} innerRef ={index === Click? Buttonref : null} to={item.to} onClick={(e) => setactive(e,index)}>
               {item.name}
             </NavItem>
           )
