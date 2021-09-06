@@ -19,16 +19,14 @@ const NavItemLink = styled(NavLink)`
     transition: all 0.3s ease-in-out;
   }
   &.active {
-    border-bottom: 5px solid #ffa236;
     background: #42474d;
-
     transition: all 0.3s ease-in-out;
   }
 `;
 
 const NavItem = (props) => {
   return (
-    <NavItemLink exact={true} to={props.to}>
+    <NavItemLink exact={true} innerRef={props.innerRef} to={props.to} onClick={props.onClick}>
       {props.children}
     </NavItemLink>
   );
