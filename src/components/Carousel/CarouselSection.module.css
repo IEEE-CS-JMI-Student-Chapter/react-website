@@ -1,0 +1,14 @@
+:root {
+  --grey: #2a333d;
+  --white: #fff;
+  --white-bg: #f4f4f4;
+  --orange: #ffa236;
+}
+
+.carousel-sec-container {
+  padding-top: 12vh;
+  /* Background color is just for testing the height of teams section. Feel free to change it when you want */
+  background-color: var(--grey);
+  color: var(--white);
+  height: 88vh;
+}

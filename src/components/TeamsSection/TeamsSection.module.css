@@ -5,7 +5,14 @@
   --orange: #ffa236;
 }
 
-.teams-sec-container{
+.teams-sec-container {
   height: 88vh;
   background-color: var(--white-bg);
+  padding: 14vh 3vw 8vh;
+}
+
+.team {
+  height: 78%;
+  width: 94vw;
+  background-color: var(--orange);
 }

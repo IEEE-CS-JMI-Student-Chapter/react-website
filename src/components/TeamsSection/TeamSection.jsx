@@ -1,15 +1,13 @@
 import React from 'react';
-import styled from "styled-components";
-import classes from "./TeamsSection.module.css";
-
-// const Tea
+// import styled from 'styled-components';
+import classes from './TeamsSection.module.css';
 
 const TeamsSection = () => {
 
     return (
-        <div className={classes["teams-sec-container"]}>
-            <h1>Teams Section</h1>
-        </div>
+        <section className={classes["teams-sec-container"]}>
+            <div className={classes["team"]}></div>
+        </section>
     );
 }
 
