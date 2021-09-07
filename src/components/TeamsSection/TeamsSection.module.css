@@ -1,0 +1,11 @@
+:root {
+  --grey: #2a333d;
+  --white: #fff;
+  --white-bg: #f4f4f4;
+  --orange: #ffa236;
+}
+
+.teams-sec-container{
+  height: 88vh;
+  background-color: var(--white-bg);
+}
