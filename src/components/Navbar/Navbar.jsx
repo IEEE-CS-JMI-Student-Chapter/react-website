@@ -14,7 +14,6 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    console.log(Buttonref.current.getBoundingClientRect());
     let right = Buttonref.current.getBoundingClientRect().x;
     setpos({
       right: right,

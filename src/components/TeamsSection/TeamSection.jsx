@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useState } from "react";
 // import styled from 'styled-components';
-import classes from './TeamsSection.module.css';
-
+import TabButton from "./TabButton";
+import classes from "./TeamsSection.module.css";
+import tabs from "./TabData";
+import TabContent from "./TabContent";
 const TeamsSection = () => {
-
-    return (
-        <section className={classes["teams-sec-container"]}>
-            <div className={classes["team-container"]}>
-                <div className={classes["button-container"]}>
-                    <button className={`${classes["team-button"]} ${classes.selected}`}>ML/AI</button>
-                    <button className={`${classes["team-button"]} ${classes.unselected}`}>DSA</button>
-                    <button className={`${classes["team-button"]} ${classes.unselected}`}>WebD</button>
-                </div>
-            </div>
-        </section>
-    );
-}
+  const [activeTab, setActiveTab] = useState(0);
+console.log(activeTab);
+  return (
+    <section className={classes["teams-sec-container"]}>
+      <div className={classes["team-container"]}>
+        <div className={classes["button-container"]}>
+          {tabs.map((tab) => {
+            return (
+              <TabButton id={tab.id} key={tab.id} activeTab={activeTab === tab.id} setActiveTab={setActiveTab}>
+                {tab.title}
+              </TabButton>
+            );
+          })}
+        </div>
+        <div className={classes["content-container"]}>
+        <TabContent {...tabs[activeTab]}/>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default TeamsSection;

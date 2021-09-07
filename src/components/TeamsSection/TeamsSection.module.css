@@ -15,30 +15,41 @@
   height: 78%;
   width: 94vw;
   position: relative;
-  background: linear-gradient(102.4deg, var(--orange) 0%, #FFD25D 99.99%);
+  background: linear-gradient(102.4deg, var(--orange) 0%, #ffd25d 99.99%);
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.22);
   border-radius: 15px;
 }
 
 .button-container {
-  height: 9vh;
+  height: 64px;
   width: 100%;
   position: absolute;
-  top: -4.5vh;
-  display: inline-flex;
+  top: -32px;
+  display: flex;
+  justify-content: center;
 }
 
 .team-button {
-  width: 16vw;
+  cursor: pointer;
+  width: max(16vw, 10ch);
   height: 100%;
   box-sizing: border-box;
   border-radius: 50px;
-
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
   line-height: 37px;
+  background: #ffffff;
+  border: 1px solid var(--orange);
+  transition: all 0.3s ease-in-out;
+  margin: 0 1vw;
+}
+.team-button:hover {
+  background: var(--orange);
+  border: 1px solid var(--white);
+  color: var(--white-bg);
+  transition: all 0.3s ease-in-out;
 }
 
 .selected {
@@ -48,7 +59,17 @@
   color: var(--white-bg);
 }
 
-.unselected {
-  background: #FFFFFF;
-  border: 1px solid var(--orange);
+@media screen and (max-width: 768px) {
+  .button-container {
+    height: 40px;
+    top: -20px;
+  }
+  .team-button {
+    border-radius: 50px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 37px;
+  }
 }
