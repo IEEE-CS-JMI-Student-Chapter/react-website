@@ -11,15 +11,29 @@ const Navbar = () => {
 
   const setactive = (e, index) => {
     setClick(index);
+    Buttonref.current = this;
   };
-
-  useEffect(() => {
-    let right = Buttonref.current.getBoundingClientRect().x;
+  const handleScroll = () => {
+    let right = Buttonref.current.getBoundingClientRect().left;
+    console.log(Buttonref.current.getBoundingClientRect());
     setpos({
       right: right,
       width: Buttonref.current.getBoundingClientRect().width,
-    });
+    }); 
+  };
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener('resize', handleScroll);
   }, [Click]);
+
+  useEffect(() =>{
+
+    setTimeout(() => {
+      handleScroll();
+    },100);
+    
+  },[]);
 
   const NavInfo = [
     {
@@ -44,12 +58,9 @@ const Navbar = () => {
     <nav className={classes["nav-container"]}>
       <NavBrand logo={"/assets/ieeecs_logo.svg"} />
       <div className={classes["nav-links"]}>
-        <NavActive
-          right={pos.right}
-          width={pos.width}
-          styles={{ right: { pos } }}
-        />
+
         {NavInfo.map((item, index) => {
+          
           return (
             <NavItem
               key={index}
@@ -61,6 +72,11 @@ const Navbar = () => {
             </NavItem>
           );
         })}
+                <NavActive
+          right={pos.right}
+          width={pos.width}
+          styles= {{left: pos.right != undefined ? pos.right : 2200}}
+        />
       </div>
     </nav>
   );
