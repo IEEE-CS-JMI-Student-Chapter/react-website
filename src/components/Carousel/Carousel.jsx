@@ -1,7 +1,7 @@
 import React from 'react'
-import classes from './CarouselSection.module.css'
+import classes from './Carousel.module.css'
 
-const CarouselSection = () => {
+const Carousel = (props) => {
 
     return (
         <section className={classes["carousel-sec-container"]}>
@@ -11,4 +11,4 @@ const CarouselSection = () => {
     );
 }
 
-export default CarouselSection;
+export default Carousel;
