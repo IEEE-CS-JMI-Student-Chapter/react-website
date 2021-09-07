@@ -6,18 +6,21 @@
 }
 
 .teams-sec-container {
-  height: 88vh;
   background-color: var(--white-bg);
-  padding: 14vh 3vw 8vh;
+  margin: 64px auto;
+  width: --webkit-fill-available;
+  margin-bottom: 100px;
+  padding: 50px 1rem;
 }
 
 .team-container {
-  height: 78%;
-  width: 94vw;
+  
   position: relative;
   background: linear-gradient(102.4deg, var(--orange) 0%, #ffd25d 99.99%);
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.22);
   border-radius: 15px;
+ max-width: 1200px;
+  margin: 0 auto;
 }
 
 .button-container {
@@ -57,6 +60,26 @@
   border: 1px solid var(--white);
   box-shadow: 0px 0px 7.5px rgba(0, 0, 0, 0.6);
   color: var(--white-bg);
+}
+
+.content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-top: 64px;
+  align-items: center;
+  margin-top: 0;
+}
+.content-container .text {
+  text-align: center;
+  max-width: 65ch;
+}
+.content-container .members-container {
+  display: flex;
+  flex-direction: row;
+  justify-self: end;
+  margin-top: auto;
 }
 
 @media screen and (max-width: 768px) {

@@ -19,9 +19,9 @@ console.log(activeTab);
             );
           })}
         </div>
-        <div className={classes["content-container"]}>
+      
         <TabContent {...tabs[activeTab]}/>
-        </div>
+        
       </div>
     </section>
   );

@@ -22,6 +22,7 @@ const Navbar = () => {
     }); 
   };
 
+  
   useEffect(() => {
     handleScroll();
     window.addEventListener('resize', handleScroll);
