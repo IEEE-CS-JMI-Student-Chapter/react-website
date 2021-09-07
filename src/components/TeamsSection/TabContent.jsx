@@ -7,7 +7,10 @@ const TabContent = (props) => {
       <p>{props.html}</p>
       {props.members.map((member) => {
         return (
-          <div className={`${member.head && classes['team-head']}`}>
+          <div
+            key={Math.random().toString(16)}
+            className={`${member.head && classes["team-head"]}`}
+          >
             <img src={member.img} alt={member.name} />
             <p>{member.name}</p>
           </div>

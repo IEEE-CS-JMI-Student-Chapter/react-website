@@ -21,6 +21,22 @@ const Navbar = () => {
     });
   }, [Click]);
 
+  const changeActiveTab = () => {
+    if (Buttonref === null) {
+      console.log("test");
+      return;
+    } else {
+      let right = Buttonref.current.getBoundingClientRect().x;
+
+      setpos({
+        right: right,
+        width: Buttonref.current.getBoundingClientRect().width,
+      });
+    }
+  };
+
+  window.addEventListener("resize", changeActiveTab);
+
   const NavInfo = [
     {
       to: "/",
