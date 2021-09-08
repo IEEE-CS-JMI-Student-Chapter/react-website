@@ -12,9 +12,9 @@ const Navbar = () => {
     switch (location.pathname) {
       case "/":
         return 0;
-      case "/teams":
+      case "/#teams":
         return 1;
-      case "/leads":
+      case "/#leads":
         return 2;
       case "/events":
         return 3;
