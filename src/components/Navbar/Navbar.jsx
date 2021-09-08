@@ -3,10 +3,26 @@ import classes from "./Navbar.module.css";
 import NavBrand from "./NavBrand";
 import NavItem from "./NavItem";
 import NavActive from "./NavActive";
+import { useLocation } from "react-router";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const handlePath = () => {
+    switch(location.pathname){
+      case "/" :
+          return 0
+      case "/teams":
+          return 1;
+      case "/leads":
+          return 2;
+      case "/events":
+          return 3;
+    }
+
+  }
   const [pos, setpos] = useState(0);
-  const [Click, setClick] = useState(0);
+  const [Click, setClick] = useState(handlePath());
   const Buttonref = useRef(null);
 
   const setactive = (e, index) => {
@@ -15,7 +31,6 @@ const Navbar = () => {
   };
   const handleScroll = () => {
     let right = Buttonref.current.getBoundingClientRect().left;
-    console.log(Buttonref.current.getBoundingClientRect());
     setpos({
       right: right,
       width: Buttonref.current.getBoundingClientRect().width,
@@ -35,6 +50,10 @@ const Navbar = () => {
     },100);
     
   },[]);
+
+  useEffect(() => {
+    setClick(handlePath);
+  },[location.pathname]);
 
   const NavInfo = [
     {
