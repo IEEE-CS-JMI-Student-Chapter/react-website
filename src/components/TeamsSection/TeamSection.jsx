@@ -8,7 +8,7 @@ const TeamsSection = () => {
     const [activeTab, setActiveTab] = useState(0);
     console.log(activeTab);
     return (
-        <section className={classes["teams-sec-container"]}>
+        <section className={classes["teams-sec-container"]} id="teams">
             <div className={classes["team-container"]}>
                 <div className={classes["button-container"]}>
                 {tabs.map((tab) => {
