@@ -82,6 +82,12 @@
   margin-top: auto;
 }
 
+.member-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .button-container {
     height: 40px;

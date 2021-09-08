@@ -76,7 +76,7 @@ const Navbar = () => {
                 <NavActive
           right={pos.right}
           width={pos.width}
-          styles= {{left: pos.right != undefined ? pos.right : 2200}}
+          styles= {{left: pos.right !== undefined ? pos.right : 2200}}
         />
       </div>
     </nav>
