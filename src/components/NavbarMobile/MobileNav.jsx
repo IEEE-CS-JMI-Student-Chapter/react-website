@@ -6,7 +6,7 @@ import NavItem from "./NavItem";
 const MobileNav = () => {
   return (
     <div className={classes["nav-container"]}>
-      <NavItem to="/" icon={<FontAwesomeIcon icon={icons.faHome} />}>
+      <NavItem to="/#top" icon={<FontAwesomeIcon icon={icons.faHome} />}>
         Home
       </NavItem>
       <NavItem to="/#teams" icon={<FontAwesomeIcon icon={icons.faUsers} />}>

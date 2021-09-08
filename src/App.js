@@ -1,4 +1,4 @@
-import React, {Fragment} from "react";
+import React, { Fragment } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -9,10 +9,10 @@ import ScrollToTop from "./helpers/ScrollToTop";
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <MobileNav />
       <Fragment>
         <ScrollToTop />
+        <Navbar />
+        <MobileNav />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/events" component={Events} />

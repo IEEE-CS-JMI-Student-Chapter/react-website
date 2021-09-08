@@ -53,7 +53,7 @@ const Navbar = () => {
 
   const NavInfo = [
     {
-      to: "/",
+      to: "/#top",
       name: "Home",
     },
     {
