@@ -72,46 +72,62 @@
 
 .content-container .text {
   text-align: center;
-  font-weight: bold;
   max-width: 75ch;
+  padding: 0 1rem;
 }
 
 .content-container .members-container {
-  
   min-width: 65ch;
   display: flex;
   flex-direction: row;
 
   justify-content: space-evenly;
+  align-items: flex-start;
 
   margin-top: 5%;
 }
 .members-container .member {
+  
   display: flex;
   flex-direction: column;
- justify-self: center;
+  justify-self: center;
   align-items: center;
+  height: 100%; 
 }
-.member img{
+.member img {
   border-radius: 100%;
+  transition: all 0.3s ease-in-out;
 }
+
+
 
 .members-container {
   width: 60%;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .member-image {
   width: 100px;
-  height: auto;
+  height: 100px;
   border-radius: 100%;
 }
 
 .member-name {
   text-align: center;
-  font-weight: bold;
   font-size: 0.75rem;
   max-width: 13ch;
+}
+
+.team-head img {
+cursor: pointer;
+  border-radius: 50%;
+}
+.team-head img:hover{
+  transform: scale(1.1);
+}
+.team-head .member-name {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {

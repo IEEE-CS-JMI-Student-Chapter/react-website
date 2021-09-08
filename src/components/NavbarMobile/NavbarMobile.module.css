@@ -1,11 +1,50 @@
 :root {
-    --grey: #2a333d;
-    --white: #fff;
-    --white-bg: #f4f4f4;
-    --orange: #ffa236;
-  }
+  --grey: #2a333d;
+  --white: #fff;
+  --white-bg: #f4f4f4;
+  --orange: #ffa236;
+}
 
-.nav-container{
-    height: 50px;
-    background-color: var(--grey);
+.nav-container {
+  position: fixed;
+  display: flex;
+  z-index: 1200;
+  bottom: 0;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 55px;
+  width: -webkit-fill-available;
+  background-color: var(--grey);
+  box-shadow: 0 -1px 10px 1px var(--orange);
+}
+.nav-item {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 7px;
+  height: 100%;
+  width: 100%;
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+.nav-item .nav-icon{
+  font-size: 1.1rem;
+}
+.nav-item .nav-title {
+  color: #8199b6;
+  font-size: 0.8rem;
+}
+.active {
+  background-color: var(--orange);
+  transition: all 0.3s ease-in-out;
+}
+.nav-item.active .nav-title {
+  color: var(--white);
+}
+@media (min-width: 768px) {
+  .nav-container {
+    display: none;
+  }
 }
