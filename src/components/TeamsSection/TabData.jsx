@@ -46,7 +46,7 @@ const tabs = [
 
     members: [
       {
-        name: "Abbas",
+        name: "Mohammed Abbas Ansari",
         role: 1,
         img: "assets/teamMembers/ABBAS.jpg",
       },
@@ -95,7 +95,7 @@ const tabs = [
         img: "assets/teamMembers/FARHAN.jpg",
       },
       {
-        name: "Shoedb Ilyas",
+        name: "Shoeb Ilyas",
 
         img: "assets/teamMembers/SHOEB.jpg",
       },
