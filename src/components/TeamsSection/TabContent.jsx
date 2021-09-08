@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./TeamsSection.module.css";
 
 const TabContent = (props) => {
+  const [content, showContent] = useState(false);
+  const expandDivHandler = () => {
+    setTimeout(() => {showContent(true);}, 500);
+    
+  };
   return (
-    <div className={classes["content-container"]}>
-      <p className={classes.text}>{props.html}</p>
+    <div onLoad={expandDivHandler} className={`${classes["content-container"]} ${content && classes["content-active"]}`}>
+      <div className={classes.text}>{props.html}</div>
       <div className={classes["members-container"]}>
-      {props.members.map((member) => {
-        return (
-          <div className={`${classes.members}  ${member.head && classes["team-head"]}`}>
-            <img className={classes["member-image"]} src={member.img} alt={member.name} />
-            <p className={classes["member-name"]}>{member.name}</p>
-          </div>
-        );
-      })}
+        {props.members.map((member) => {
+          return (
+            <div key={member.name} className={`${classes.member}  ${member.head && classes["team-head"]}`}>
+              <img className={classes["member-image"]} src={member.img} alt={member.name} />
+              <p className={classes["member-name"]}>{member.name}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

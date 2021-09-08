@@ -1,0 +1,11 @@
+:root {
+    --grey: #2a333d;
+    --white: #fff;
+    --white-bg: #f4f4f4;
+    --orange: #ffa236;
+  }
+
+.nav-container{
+    height: 50px;
+    background-color: var(--grey);
+}

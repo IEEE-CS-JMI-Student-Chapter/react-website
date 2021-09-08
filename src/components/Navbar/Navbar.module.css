@@ -15,10 +15,26 @@
   background-color: var(--grey);
   z-index: 100;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+
 }
 
 .nav-links {
   display: flex;
   margin-right: 5ch;
   height: 100%;
+  transition: all 0.5s ease-in-out;
+
+}
+
+@media (max-width: 768px) {
+  .nav-container{
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+
+  }
+  .nav-links {
+    display: none;
+    transition: all 0.5s ease-in-out;
+  }
 }
