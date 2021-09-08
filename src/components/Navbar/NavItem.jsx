@@ -1,8 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
-const NavItemLink = styled(NavLink)`
+import { HashLink  } from 'react-router-hash-link';
+const NavItemLink = styled(HashLink)`
   text-decoration: none;
   display: flex;
   flex-direction: column;

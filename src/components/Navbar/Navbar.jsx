@@ -9,18 +9,17 @@ const Navbar = () => {
   const location = useLocation();
 
   const handlePath = () => {
-    switch(location.pathname){
-      case "/" :
-          return 0
+    switch (location.pathname) {
+      case "/":
+        return 0;
       case "/teams":
-          return 1;
+        return 1;
       case "/leads":
-          return 2;
+        return 2;
       case "/events":
-          return 3;
+        return 3;
     }
-
-  }
+  };
   const [pos, setpos] = useState(0);
   const [Click, setClick] = useState(handlePath());
   const Buttonref = useRef(null);
@@ -34,26 +33,23 @@ const Navbar = () => {
     setpos({
       right: right,
       width: Buttonref.current.getBoundingClientRect().width,
-    }); 
+    });
   };
 
-  
   useEffect(() => {
     handleScroll();
-    window.addEventListener('resize', handleScroll);
+    window.addEventListener("resize", handleScroll);
   }, [Click]);
 
-  useEffect(() =>{
-
+  useEffect(() => {
     setTimeout(() => {
       handleScroll();
-    },100);
-    
-  },[]);
+    }, 100);
+  }, []);
 
   useEffect(() => {
     setClick(handlePath);
-  },[location.pathname]);
+  }, [location.pathname]);
 
   const NavInfo = [
     {
@@ -61,11 +57,11 @@ const Navbar = () => {
       name: "Home",
     },
     {
-      to: "/teams",
+      to: "/#teams",
       name: "Teams",
     },
     {
-      to: "/leads",
+      to: "/#leads",
       name: "Leads",
     },
     {
@@ -78,25 +74,14 @@ const Navbar = () => {
     <nav className={classes["nav-container"]}>
       <NavBrand logo={"/assets/ieeecs_logo.svg"} />
       <div className={classes["nav-links"]}>
-
         {NavInfo.map((item, index) => {
-          
           return (
-            <NavItem
-              key={index}
-              innerRef={index === Click ? Buttonref : null}
-              to={item.to}
-              onClick={(e) => setactive(e, index)}
-            >
+            <NavItem key={index} innerRef={index === Click ? Buttonref : null} to={item.to} onClick={(e) => setactive(e, index)}>
               {item.name}
             </NavItem>
           );
         })}
-                <NavActive
-          right={pos.right}
-          width={pos.width}
-          styles= {{left: pos.right !== undefined ? pos.right : 2200}}
-        />
+        <NavActive right={pos.right} width={pos.width} styles={{ left: pos.right !== undefined ? pos.right : 2200 }} />
       </div>
     </nav>
   );

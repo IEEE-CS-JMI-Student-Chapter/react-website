@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
         <LandingCard />
-        <TeamsSection />
+        <TeamsSection  />
         <Carousel />
         </>
     )
