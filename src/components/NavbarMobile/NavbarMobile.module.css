@@ -11,8 +11,7 @@
   z-index: 1200;
   bottom: 0;
   justify-content: space-between;
-  padding: 0 1rem;
-  height: 55px;
+  max-height: 55px;
   width: -webkit-fill-available;
   background-color: var(--grey);
   box-shadow: 0 -1px 10px 1px var(--orange);
@@ -29,7 +28,7 @@
   color: var(--white);
   transition: all 0.3s ease-in-out;
 }
-.nav-item .nav-icon{
+.nav-item .nav-icon {
   font-size: 1.1rem;
 }
 .nav-item .nav-title {
