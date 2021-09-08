@@ -3,39 +3,57 @@ import classes from "./Navbar.module.css";
 import NavBrand from "./NavBrand";
 import NavItem from "./NavItem";
 import NavActive from "./NavActive";
+import { useLocation } from "react-router";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const handlePath = () => {
+    switch(location.pathname){
+      case "/" :
+          return 0
+      case "/teams":
+          return 1;
+      case "/leads":
+          return 2;
+      case "/events":
+          return 3;
+    }
+
+  }
   const [pos, setpos] = useState(0);
-  const [Click, setClick] = useState(0);
+  const [Click, setClick] = useState(handlePath());
   const Buttonref = useRef(null);
 
   const setactive = (e, index) => {
     setClick(index);
+    Buttonref.current = this;
   };
-
-  useEffect(() => {
-    let right = Buttonref.current.getBoundingClientRect().x;
+  const handleScroll = () => {
+    let right = Buttonref.current.getBoundingClientRect().left;
     setpos({
       right: right,
       width: Buttonref.current.getBoundingClientRect().width,
-    });
-  }, [Click]);
-
-  const changeActiveTab = () => {
-    if (Buttonref === null) {
-      console.log("test");
-      return;
-    } else {
-      let right = Buttonref.current.getBoundingClientRect().x;
-
-      setpos({
-        right: right,
-        width: Buttonref.current.getBoundingClientRect().width,
-      });
-    }
+    }); 
   };
 
-  window.addEventListener("resize", changeActiveTab);
+  
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener('resize', handleScroll);
+  }, [Click]);
+
+  useEffect(() =>{
+
+    setTimeout(() => {
+      handleScroll();
+    },100);
+    
+  },[]);
+
+  useEffect(() => {
+    setClick(handlePath);
+  },[location.pathname]);
 
   const NavInfo = [
     {
@@ -60,12 +78,9 @@ const Navbar = () => {
     <nav className={classes["nav-container"]}>
       <NavBrand logo={"/assets/ieeecs_logo.svg"} />
       <div className={classes["nav-links"]}>
-        <NavActive
-          right={pos.right}
-          width={pos.width}
-          styles={{ right: { pos } }}
-        />
+
         {NavInfo.map((item, index) => {
+          
           return (
             <NavItem
               key={index}
@@ -77,6 +92,11 @@ const Navbar = () => {
             </NavItem>
           );
         })}
+                <NavActive
+          right={pos.right}
+          width={pos.width}
+          styles= {{left: pos.right !== undefined ? pos.right : 2200}}
+        />
       </div>
     </nav>
   );

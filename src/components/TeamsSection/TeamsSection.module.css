@@ -72,7 +72,8 @@
 
 .content-container .text {
   text-align: center;
-  max-width: 65ch;
+  font-weight: bold;
+  max-width: 75ch;
 }
 
 .content-container .members-container {
@@ -93,6 +94,24 @@
 }
 .member img{
   border-radius: 100%;
+}
+
+.members-container {
+  width: 60%;
+  justify-content: space-evenly;
+}
+
+.member-image {
+  width: 100px;
+  height: auto;
+  border-radius: 100%;
+}
+
+.member-name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.75rem;
+  max-width: 13ch;
 }
 
 @media screen and (max-width: 768px) {

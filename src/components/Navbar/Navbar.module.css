@@ -21,7 +21,6 @@
 
 .nav-links {
   display: flex;
-  margin-right: 5ch;
   height: 100%;
   transition: all 0.5s ease-in-out;
 

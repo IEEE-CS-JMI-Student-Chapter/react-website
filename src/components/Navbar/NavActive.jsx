@@ -15,7 +15,7 @@ const Nav = styled.div`
 
 const NavActive = (props) => {
     return (
-        <Nav right={props.right} width={props.width} styles = {props.styles}>
+        <Nav right={props.right} width={props.width} style ={props.styles}>
             {props.children}
         </Nav>
     )
