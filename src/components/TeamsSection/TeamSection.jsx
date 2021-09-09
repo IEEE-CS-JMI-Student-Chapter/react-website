@@ -4,6 +4,7 @@ import TabButton from "./TabButton";
 import classes from "./TeamsSection.module.css";
 import tabs from "./TabData";
 import TabContent from "./TabContent";
+
 const TeamsSection = () => {
   const [activeTab, setActiveTab] = useState(0);
   console.log(activeTab);

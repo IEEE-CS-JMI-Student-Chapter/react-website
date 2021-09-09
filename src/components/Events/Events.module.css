@@ -1,0 +1,40 @@
+:root {
+    --grey: #2a333d;
+    --white: #fff;
+    --white-bg: #f4f4f4;
+    --orange: #ffa236;
+}
+
+.events-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--white-bg);
+}
+
+.live, .previous{
+    width: 44vw;
+}
+
+.upcoming {
+    width: 30vw;
+}
+
+.heading {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 37px;
+    /* identical to box height */
+    color: #3D3B3B;
+    text-decoration: underline;
+    text-decoration-color: var(--orange);
+}
+
+.event-card {
+    height: 100px;
+    margin-bottom: 2vh;
+    background: #E5E5E5;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
