@@ -48,3 +48,19 @@
     line-height: 18px;
     color: #3D3B3B;
 }
+
+.event-btn {
+    width: 120px;
+    height: 36.13px;
+    background: #FFA236;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 50px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 16px;
+    color: var(--white);
+}

@@ -6,12 +6,12 @@ const EventCard = (props) => {
     return (
         <div className={classes["event-card"]}>
             <div className={classes["event-details"]}>
-                <p>{props.title}</p>
-                <p>Timing: {props.startTime}- {props.endTime}</p>
-                <p>Date: {props.date} {props.status}</p>
+                <p style={{marginBlockStart: "0"}}>{props.title}</p>
+                <p style={{marginBlockEnd: "0"}}>Timing: {props.startTime}- {props.endTime}</p>
+                <p style={{marginBlockStart: "0"}}>Date: {props.date} ({props.status})</p>
             </div>
             <div className={classes["button-and-winner"]}>
-                Join
+                <button className={classes["event-btn"]}>JOIN</button>
             </div>
         </div>
     );

@@ -2,14 +2,14 @@ const events = {
     live: [
         {
             id: 1,
-            title: "DSA Coding Competition",
+            title: "DSA CODING COMPETITION",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",
             date: "Today"
         },
         {
             id: 2,
-            title: "CS/ IT Debate",
+            title: "CS/ IT DEBATE",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",
             date: "Today"
@@ -18,14 +18,14 @@ const events = {
     upcoming: [
         {
             id: 1,
-            title: "DSA Coding Competition",
+            title: "DSA CODING COMPETITION",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",
             date: "Tommorow"
         },
         {
             id: 2,
-            title: "CS/ IT Debate",
+            title: "CS/ IT DEBATE",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",
             date: "Tommorrow"
@@ -34,7 +34,7 @@ const events = {
     previous: [
         {
             id: 1,
-            title: "DSA Coding Competition",
+            title: "DSA CODING COMPETITION",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",
             date: "26/08/2021",
@@ -42,7 +42,7 @@ const events = {
         },
         {
             id: 2,
-            title: "CS/ IT Debate",
+            title: "CS/ IT DEBATE",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",
             date: "03/08/2021",
