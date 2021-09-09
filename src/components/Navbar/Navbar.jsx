@@ -18,6 +18,8 @@ const Navbar = () => {
         return 2;
       case "/events":
         return 3;
+      default:
+        return 0;
     }
   };
   const [pos, setpos] = useState(0);
