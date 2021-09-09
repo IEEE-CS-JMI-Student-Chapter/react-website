@@ -49,6 +49,12 @@
     color: #3D3B3B;
 }
 
+.button-and-winner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .event-btn {
     width: 120px;
     height: 36.13px;

@@ -11,7 +11,10 @@ const EventCard = (props) => {
                 <p style={{marginBlockStart: "0"}}>Date: {props.date} ({props.status})</p>
             </div>
             <div className={classes["button-and-winner"]}>
-                <button className={classes["event-btn"]}>JOIN</button>
+                <span>{props.winner}</span>
+                <button className={classes["event-btn"]} style={{backgroundColor: props.btnColor}}>
+                    {props.btnText}
+                </button>
             </div>
         </div>
     );
