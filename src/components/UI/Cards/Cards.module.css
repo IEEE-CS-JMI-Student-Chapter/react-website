@@ -6,9 +6,31 @@
   }
 
 .landing-card {
-  background-color: var(--gray);
-  /* for testing */
-  /* height: 300px;
-  width: -webkit-fill-available; */
-  /* ******** */
+  background-color: var(--grey);
+  /* margin: 64px auto; */
+  height: 100vh;
+  /* width: -webkit-fill-available;  */
+  color: var(--white);
+}
+
+.logo-svg-text {
+  height: 80vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.letsGo {
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
 }
