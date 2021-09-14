@@ -70,3 +70,20 @@
     line-height: 16px;
     color: var(--white);
 }
+
+@media screen and (max-width: 768px) {
+    .events-container {
+        flex-direction: column;
+        padding: 2vw;
+    }    
+    .live, .previous, .upcoming {
+        width: 90vw;
+    }
+    .button-and-winner {
+        align-items: flex-end;
+    }
+    .event-btn {
+        width: 90px;
+    }
+}
+  
