@@ -74,7 +74,7 @@
 @media screen and (max-width: 768px) {
     .events-container {
         flex-direction: column;
-        padding: 2vw;
+        padding: 4vw;
     }    
     .live, .previous, .upcoming {
         width: 90vw;
@@ -83,7 +83,9 @@
         align-items: flex-end;
     }
     .event-btn {
+        height: 30px;
         width: 90px;
+        font-size: 16px;
     }
 }
   
