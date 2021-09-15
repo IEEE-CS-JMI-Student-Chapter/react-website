@@ -32,7 +32,7 @@ const LandingCard = (props) => {
           </div>
           <div className={classes["link"]}>
             <span>
-              <a href="#">Let's Go</a>
+              <a href="/#">Let's Go</a>
               <span id={classes["icon"]}>
               <FontAwesomeIcon icon={icons.faAngleDoubleRight} />
               </span>
@@ -57,9 +57,9 @@ const LandingCard = (props) => {
               }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <img src="assets/HeroGraphic.png" />
+              <img src="assets/HeroGraphic.png" alt=""/>
             </motion.div>
-            <img className={classes["ground"]} src="assets/HeroGround.svg" />
+            <img className={classes["ground"]} src="assets/HeroGround.svg" alt=""/>
           </div>
         </div>
       </div>
