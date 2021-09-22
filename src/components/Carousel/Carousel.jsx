@@ -1,11 +1,12 @@
 import React from "react";
 import classes from "./Carousel.module.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel as CarouselRrc, Thumbs } from "react-responsive-carousel";
+import { Carousel as CarouselRrc } from "react-responsive-carousel";
 const Carousel = (props) => {
   const options = {
     autoPlay: false,
     emulateTouch: true,
+    interval: 5000,
     infiniteLoop: true,
     showStatus: false,
     renderArrowPrev: (onClickHandler, hasPrev, label) => (

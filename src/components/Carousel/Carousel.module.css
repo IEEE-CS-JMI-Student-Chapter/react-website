@@ -77,7 +77,6 @@
   justify-content: center;
 }
 
-
 .item-container .image-section img {
   border-radius: 50%;
   width: 200px !important;
@@ -99,5 +98,19 @@
   .item-container .image-section img {
     border-radius: 50%;
     width: 180px !important;
+  }
+
+  .arrow {
+    border-style: none;
+    background-color: transparent;
+    font-size: 30px;
+  }
+  .arrow:hover {
+    background-color: transparent;
+    color: var(--orange);
+  }
+  .arrow:active {
+    background-color: var(--orange);
+    transition: all 0.3s ease-in-out;
   }
 }
