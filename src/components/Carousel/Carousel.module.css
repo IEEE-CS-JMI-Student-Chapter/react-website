@@ -1,14 +1,103 @@
-:root {
-  --grey: #2a333d;
-  --white: #fff;
-  --white-bg: #f4f4f4;
-  --orange: #ffa236;
+.carousel {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.carousel-sec-container {
-  padding-top: 12vh;
-  /* Background color is just for testing the height of teams section. Feel free to change it when you want */
-  background-color: var(--grey);
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  background-color: var(--white);
+  border-color: var(--orange);
+  color: var(--orange);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  transition: all 0.3s ease-in-out;
+  z-index: 1200;
+}
+.arrow:hover {
+  background-color: var(--orange);
   color: var(--white);
-  height: 88vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.arrow-next {
+  right: 0;
+  top: 45%;
+}
+
+.arrow-prev {
+  left: 0;
+  top: 45%;
+}
+.indicator {
+  display: inline-block;
+  cursor: pointer;
+  height: 8px;
+  width: 30px;
+  background-color: var(--white);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-left: 10px;
+
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.indicator-selected {
+  background-color: var(--orange);
+  transition: all 0.3s ease-in-out;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  width: 90ch;
+  max-width: 90vw;
+  padding: 80px 1.5rem;
+  border-radius: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin: 30px auto;
+}
+.item-container .carousel-text {
+  padding: 0 1.2rem;
+  max-width: 80ch;
+}
+
+.item-container .image-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.item-container .image-section img {
+  border-radius: 50%;
+  width: 200px !important;
+}
+
+.item-container .image-section span {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    width: auto;
+    max-width: -webkit-fill-available;
+  }
+  .item-container {
+    flex-direction: column-reverse;
+    padding: 10px 0;
+  }
+  .item-container .image-section img {
+    border-radius: 50%;
+    width: 180px !important;
+  }
 }
