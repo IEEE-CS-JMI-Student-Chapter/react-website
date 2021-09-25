@@ -12,7 +12,7 @@ const EventCard = (props) => {
             </div>
             <div className={classes["button-and-winner"]}>
                 <span>{props.winner}</span>
-                <button className={classes["event-btn"]} style={{backgroundColor: props.btnColor}}>
+                <button className={classes["event-btn"]} style={{backgroundColor: props.btnColor}} onClick={() => window.open(props.link, "_blank")}>
                     {props.btnText}
                 </button>
             </div>

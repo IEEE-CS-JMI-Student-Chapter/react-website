@@ -39,7 +39,8 @@ const EventList = (props) => {
                             title={event.title} 
                             startTime={event.startTime} endTime={event.endTime} 
                             date={event.date} 
-                            status={status} 
+                            status={status}
+                            link={event.link}
                             key={event.id}
                             btnText={btnText}
                             btnColor={btnColor}
