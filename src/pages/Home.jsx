@@ -33,7 +33,7 @@ const Home = () => {
     <>
       <LandingCard />
       <TeamsSection />
-      <div className="carousel-section">
+      <div className="carousel-section" id="leads">
         <Carousel CarouselData={CarouselData} />
       </div>
     </>
