@@ -11,12 +11,20 @@
     background-color: var(--white-bg);
 }
 
-.live, .previous{
+.live, .upcoming{
     width: 44vw;
 }
+.live .event-details, .upcoming .event-details {
+    height: 34.5vh;
+    overflow-y: auto;
+}
 
-.upcoming {
+.previous {
     width: 30vw;
+}
+.previous .event-details {
+    height: 80vh;
+    overflow-y: auto;
 }
 
 .heading {

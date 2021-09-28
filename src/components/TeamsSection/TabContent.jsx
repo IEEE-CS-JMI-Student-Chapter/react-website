@@ -14,7 +14,7 @@ const TabContent = (props) => {
       <div className={classes.text}>{props.html}</div>
       <div className={classes["members-container"]}>
    
-        {/* {props.members.map((member) => {
+        {props.members.map((member) => {
           return (
             
             <div key={member.name} className={`${classes.member}  ${member.head && classes["team-head"]}`}>
@@ -23,7 +23,7 @@ const TabContent = (props) => {
             </div>
             
           );
-        })} */}
+        })}
        
       </div>
     </div>

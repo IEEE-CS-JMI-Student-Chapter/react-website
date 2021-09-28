@@ -47,6 +47,60 @@ const events = {
         },
         {
             id: 2,
+            title: "DSA CODING COMPETITION",
+            startTime: "2:00 P.M.",
+            endTime: "4:30 P.M.",
+            date: "26/08/2021",
+            winner: "DOGE BOI",
+            link: "https://www.google.com/search?q=kya+hi+hota+hai+galat&sxsrf=AOaemvLIYrPbiALecnQl2RzP5PKVv1dMiw:1632540696166&source=lnms&tbm=isch&sa=X&ved=2ahUKEwisrJqCmJnzAhVs7XMBHXMhBVAQ_AUoAXoECAEQAw"
+        },
+        {
+            id: 3,
+            title: "DSA CODING COMPETITION",
+            startTime: "2:00 P.M.",
+            endTime: "4:30 P.M.",
+            date: "26/08/2021",
+            winner: "DOGE BOI",
+            link: "https://www.google.com/search?q=kya+hi+hota+hai+galat&sxsrf=AOaemvLIYrPbiALecnQl2RzP5PKVv1dMiw:1632540696166&source=lnms&tbm=isch&sa=X&ved=2ahUKEwisrJqCmJnzAhVs7XMBHXMhBVAQ_AUoAXoECAEQAw"
+        },
+        {
+            id: 4,
+            title: "DSA CODING COMPETITION",
+            startTime: "2:00 P.M.",
+            endTime: "4:30 P.M.",
+            date: "26/08/2021",
+            winner: "DOGE BOI",
+            link: "https://www.google.com/search?q=kya+hi+hota+hai+galat&sxsrf=AOaemvLIYrPbiALecnQl2RzP5PKVv1dMiw:1632540696166&source=lnms&tbm=isch&sa=X&ved=2ahUKEwisrJqCmJnzAhVs7XMBHXMhBVAQ_AUoAXoECAEQAw"
+        },
+        {
+            id: 5,
+            title: "DSA CODING COMPETITION",
+            startTime: "2:00 P.M.",
+            endTime: "4:30 P.M.",
+            date: "26/08/2021",
+            winner: "DOGE BOI",
+            link: "https://www.google.com/search?q=kya+hi+hota+hai+galat&sxsrf=AOaemvLIYrPbiALecnQl2RzP5PKVv1dMiw:1632540696166&source=lnms&tbm=isch&sa=X&ved=2ahUKEwisrJqCmJnzAhVs7XMBHXMhBVAQ_AUoAXoECAEQAw"
+        },
+        {
+            id: 6,
+            title: "DSA CODING COMPETITION",
+            startTime: "2:00 P.M.",
+            endTime: "4:30 P.M.",
+            date: "26/08/2021",
+            winner: "DOGE BOI",
+            link: "https://www.google.com/search?q=kya+hi+hota+hai+galat&sxsrf=AOaemvLIYrPbiALecnQl2RzP5PKVv1dMiw:1632540696166&source=lnms&tbm=isch&sa=X&ved=2ahUKEwisrJqCmJnzAhVs7XMBHXMhBVAQ_AUoAXoECAEQAw"
+        },
+        {
+            id: 7,
+            title: "DSA CODING COMPETITION",
+            startTime: "2:00 P.M.",
+            endTime: "4:30 P.M.",
+            date: "26/08/2021",
+            winner: "DOGE BOI",
+            link: "https://www.google.com/search?q=kya+hi+hota+hai+galat&sxsrf=AOaemvLIYrPbiALecnQl2RzP5PKVv1dMiw:1632540696166&source=lnms&tbm=isch&sa=X&ved=2ahUKEwisrJqCmJnzAhVs7XMBHXMhBVAQ_AUoAXoECAEQAw"
+        },
+        {
+            id: 8,
             title: "CS/ IT DEBATE",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",

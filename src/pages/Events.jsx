@@ -7,9 +7,9 @@ const Events = () => {
         <div className={classes["events-container"]}>
             <div className={classes["left-events"]}>
                 <EventList type="live" />
-                <EventList type="previous" />
+                <EventList type="upcoming" />
             </div>
-            <EventList type="upcoming" />
+            <EventList type="previous" />
         </div>
     )
 }

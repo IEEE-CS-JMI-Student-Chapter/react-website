@@ -83,11 +83,8 @@
 
   justify-content: space-evenly;
   align-items: flex-start;
-
-  margin-top: 5%;
 }
 .members-container .member {
-  
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -145,5 +142,8 @@ cursor: pointer;
   }
   .text {
     font-size: 0.8rem;
+  }
+  .members-container {
+    display: none !important;
   }
 }
