@@ -2,6 +2,8 @@ import React from "react";
 import LandingCard from "../components/UI/Cards/LandingCard";
 import TeamsSection from "../components/TeamsSection/TeamSection";
 import Carousel from "../components/Carousel/Carousel";
+import Footer from "../components/Footer/footer";
+
 const CarouselData = [
   {
     image: "/assets/teamMembers/SARFARAZ.jpg",
@@ -36,6 +38,7 @@ const Home = () => {
       <div className="carousel-section" id="leads">
         <Carousel CarouselData={CarouselData} />
       </div>
+      <Footer />
     </>
   );
 };

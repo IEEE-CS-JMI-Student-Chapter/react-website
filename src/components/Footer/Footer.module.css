@@ -1,0 +1,33 @@
+:root {
+	--grey: #2a333d;
+	--white: #fff;
+	--white-bg: #f4f4f4;
+	--orange: #ffa236;
+}
+
+.footer-main {
+	background-color: var(--grey);
+	color: var(--white);
+	padding: 50px 0;
+}
+
+.social-links {
+	list-style: none;
+	padding-left: 0;
+}
+
+.social-links li {
+	display: inline;
+	padding: 0.5vw;
+}
+
+.logo-image {
+	width: 15vw;
+	height: auto;
+}
+.lorem-para {
+	text-align: center;
+	color: #f7f7f7;
+	font-weight: 200;
+	padding: 2vh 10vw;
+}
