@@ -19,7 +19,7 @@
   height: 60px;
   width: 60px;
   transition: all 0.3s ease-in-out;
-  z-index: 1200;
+  z-index: 100;
 }
 .arrow:hover {
   background-color: var(--orange);
