@@ -44,19 +44,19 @@ const Footer = ()=>{
             <div class="container-fluid">
                 <div class="row text-center d-flex justify-content-center" style={{padding:"30px 0"}} >
                     <div class="col-2" >
-                        <a href="www.google.com">LINK</a>
+                        <a href="#">LINKS</a>
                     </div>
                     <div class="col-2">
-                        LINKS
+                        <a href="#">LINKS</a>
                     </div>
                     <div class="col-2">
-                        LINKS
+                        <a href="#">LINKS</a>
                     </div>
                     <div class="col-2">
-                        LINKS
+                        <a href="#">LINKS</a>
                     </div>
                     <div class="col-2">
-                        LINKS
+                        <a href="#">LINKS</a>
                     </div>
                 </div>
             </div>
