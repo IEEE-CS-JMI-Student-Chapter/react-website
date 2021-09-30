@@ -8,7 +8,7 @@
 .footer-main {
 	background-color: var(--grey);
 	color: var(--white);
-	padding: 50px 0;
+	padding: 5vh 1vw;
 }
 
 .social-links {
@@ -19,6 +19,15 @@
 .social-links li {
 	display: inline;
 	padding: 0.5vw;
+}
+
+.social-links li a {
+	color: #fff;
+	transition: color 0.2s ease-in-out;
+}
+
+.social-links li a:hover {
+	color: var(--orange);
 }
 
 .logo-image {
