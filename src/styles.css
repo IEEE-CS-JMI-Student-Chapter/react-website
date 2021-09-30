@@ -14,3 +14,9 @@ body {
   background-color: var(--white-bg);
   padding: 50px 0;
 }
+a,
+a:link,
+a:hover {
+  color: #fff;
+  text-decoration: inherit;
+}

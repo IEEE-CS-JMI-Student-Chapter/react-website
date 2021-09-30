@@ -22,19 +22,15 @@ const LandingCard = (props) => {
           <img src="assets/landingLogo.png" alt="Landing Logo" />
           <div className={classes.text}>
             <p>
-              IEEE CS is a technology driven society established to empower
-              people to bring about changes in the community. We are expanding
-              group of professionals that lead in computing and connecting
-              members worldwide. Our society enables people to advance in
-              technology by delivering tools for individuals at all stages of
-              their professional careers.
+              IEEE CS is a <span className={classes["highlight"]} >technology</span> driven society established to empower people to bring about changes in the community. We are expanding group of professionals that lead in computing and
+              connecting members worldwide. Our society enables people to advance in technology by delivering tools for individuals at all stages of their professional careers.
             </p>
           </div>
           <div className={classes["link"]}>
-            <span>
+            <span className={classes["letsGo"]}>
               <a href="/#">Let's Go</a>
               <span id={classes["icon"]}>
-              <FontAwesomeIcon icon={icons.faAngleDoubleRight} />
+                <FontAwesomeIcon icon={icons.faAngleDoubleRight} />
               </span>
             </span>
           </div>
@@ -57,9 +53,9 @@ const LandingCard = (props) => {
               }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <img src="assets/HeroGraphic.png" alt=""/>
+              <img src="assets/HeroGraphic.png" alt="" />
             </motion.div>
-            <img className={classes["ground"]} src="assets/HeroGround.svg" alt=""/>
+            <img className={classes["ground"]} src="assets/HeroGround.svg" alt="" />
           </div>
         </div>
       </div>

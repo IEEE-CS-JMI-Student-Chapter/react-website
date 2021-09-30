@@ -20,26 +20,41 @@ const tabs = [
         name: "Anzal Husain Abedi",
         head: true,
         img: "assets/teamMembers/ABBAS.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "",
+        website: "",
       },
       {
         name: "Fardeen Something",
 
         img: "assets/teamMembers/ABBAS.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Fazeel Something",
 
         img: "assets/teamMembers/ABBAS.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Lal Bihari Pandey",
 
         img: "assets/teamMembers/ABBAS.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Md. Arbaaz",
 
         img: "assets/teamMembers/ABBAS.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
     ],
   },
@@ -59,26 +74,37 @@ const tabs = [
     ),
 
     members: [
-     
       {
         name: "Mohammed Abbas Ansari",
         head: true,
         img: "assets/teamMembers/ABBAS.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Ayaz Zia Ansari",
 
         img: "assets/teamMembers/AYAZ.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Md. Haider Zama",
 
         img: "assets/teamMembers/ABBAS.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Mohammed Kashif",
 
         img: "assets/teamMembers/ABBAS.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
     ],
   },
@@ -101,26 +127,41 @@ const tabs = [
         name: "Husain Shahid Rao",
         head: true,
         img: "assets/teamMembers/TAHIR.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Tahir Reyaz",
-      
+
         img: "assets/teamMembers/TAHIR.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Sakib Ali",
 
         img: "assets/teamMembers/SAKIB.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Farhan Akhtar",
 
         img: "assets/teamMembers/FARHAN.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
       {
         name: "Shoeb Ilyas",
 
         img: "assets/teamMembers/SHOEB.jpg",
+        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
+        github: "www.google.com",
+        website: "www.google.com",
       },
     ],
   },
