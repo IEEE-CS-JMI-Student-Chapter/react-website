@@ -21,13 +21,14 @@
 	padding: 0.5vw;
 }
 
-.social-links li a {
+.social-links li a svg {
 	color: #fff;
-	transition: color 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
-.social-links li a:hover {
+.social-links li a svg:hover {
 	color: var(--orange);
+	transform: scale(1.2);
 }
 
 .logo-image {
