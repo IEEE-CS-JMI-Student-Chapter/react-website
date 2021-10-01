@@ -140,9 +140,9 @@ const tabs = [
         website: "www.google.com",
       },
       {
-        name: "Sakib Ali",
+        name: "Saquib Ali",
 
-        img: "assets/teamMembers/SAKIB.jpg",
+        img: "assets/teamMembers/Saquib.jpeg",
         linkedin: "https://www.linkedin.com/in/anzal-husain-abedi-b9a8b9b4/",
         github: "www.google.com",
         website: "www.google.com",
