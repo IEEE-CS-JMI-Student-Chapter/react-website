@@ -34,20 +34,18 @@
 
 
   .logo {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    padding: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
   } 
 
   .heading-text {
     font-size: 3rem;;
   }
   @media screen and (max-width: 768px) {
-    .logo {
-      width: 100%;
-      max-width: 400px;
+    .logo{
+      flex-direction: column;
     }
     .intro-text {
       padding: 30px;

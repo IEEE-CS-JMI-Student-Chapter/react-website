@@ -8,36 +8,101 @@
 .footer-main {
 	background-color: var(--grey);
 	color: var(--white);
+	display: flex;
 	padding: 5vh 1vw;
+	justify-content: center;
 }
 
-.social-links {
+.logo{
+	width: 20%;
+}
+
+.logo img{
+	width: 100%;
+}
+
+.menu , .follow , .contactus{
+	font-size: 1.5rem;
+	padding: 2% 4%;
+	margin: 0px 1%;
+}
+.menu ul , .follow ul , .contactus ul{
 	list-style: none;
-	padding-left: 0;
+	margin: 0;
+	padding: 0;
 }
 
-.social-links li {
-	display: inline;
-	padding: 0.5vw;
-}
-
-.social-links li a svg {
-	color: #fff;
+.menu li , .follow li , .heading, .contactus li{
+	padding: 5px;
+	font-weight: 900;
+	opacity: 0.5;
 	transition: all 0.2s ease-in-out;
 }
 
-.social-links li a svg:hover {
-	color: var(--orange);
-	transform: scale(1.2);
+.menu li:hover , .follow li:hover{
+	opacity: 1;
+	font-size: 1.8rem;
 }
 
-.logo-image {
-	width: 15vw;
-	height: auto;
+.menu li:nth-child(1), .follow .heading, .contactus li:nth-child(1){
+	color: var(--orange);
+	font-size: 2rem;
+	opacity: 1;
 }
-.lorem-para {
-	text-align: center;
-	color: #f7f7f7;
-	font-weight: 200;
-	padding: 2vh 10vw;
+
+.follow ul {
+	display : flex;
+}
+
+.follow li{
+	margin: 1px 5px;
+}
+
+.contactus li{
+	opacity:1;
+}
+
+.contactCard div:nth-child(1){
+	font-size: 1rem;
+	opacity: 1;
+}
+
+.contactCard div:nth-child(2){
+	opacity: 0.5;
+	font-size: 1.2rem;
+	transform: scale(1);
+	transition: all 0.2s ease-in-out;
+}
+.contactCard div:nth-child(2):hover{
+	opacity: 1;
+}
+
+@media only screen and (max-width: 900px) {
+	.menu{
+		display: none;
+	}
+
+	.footer-main{
+		flex-direction: column;
+		padding-bottom: 100px;
+	}
+
+	.logo{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logo img{
+		width: 40%;
+	}
+
+	.follow .contactus{
+		font-size: 1rem;
+	}
+
+	.menu li:nth-child(1), .follow .heading, .contactus li:nth-child(1){
+		font-size: 1.5rem;
+	}
 }
