@@ -1,108 +1,126 @@
 :root {
-	--grey: #2a333d;
-	--white: #fff;
-	--white-bg: #f4f4f4;
-	--orange: #ffa236;
+  --grey: #2a333d;
+  --white: #fff;
+  --white-bg: #f4f4f4;
+  --orange: #ffa236;
 }
 
 .footer-main {
-	background-color: var(--grey);
-	color: var(--white);
-	display: flex;
-	padding: 5vh 1vw;
-	justify-content: center;
+  background-color: var(--grey);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 1vw;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo{
-	width: 20%;
+.logo {
+  width: 20%;
 }
 
-.logo img{
-	width: 100%;
+.logo img {
+  width: 100%;
 }
 
-.menu , .follow , .contactus{
-	font-size: 1.5rem;
-	padding: 2% 4%;
-	margin: 0px 1%;
+.menu,
+.follow,
+.contactus {
+  font-size: 1.5rem;
+  padding: 2% 4%;
+  margin: 0px 1%;
 }
-.menu ul , .follow ul , .contactus ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-.menu li , .follow li , .heading, .contactus li{
-	padding: 5px;
-	font-weight: 900;
-	opacity: 0.5;
-	transition: all 0.2s ease-in-out;
+.menu ul,
+.follow ul,
+.contactus ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.menu li:hover , .follow li:hover{
-	opacity: 1;
-	font-size: 1.8rem;
+.menu li,
+.follow li,
+.heading,
+.contactus li {
+  padding: 5px;
+  font-weight: 900;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
 }
 
-.menu li:nth-child(1), .follow .heading, .contactus li:nth-child(1){
-	color: var(--orange);
-	font-size: 2rem;
-	opacity: 1;
+.menu li:hover,
+.follow li:hover {
+  opacity: 1;
+  font-size: 1.8rem;
+}
+
+.menu li:nth-child(1),
+.follow .heading,
+.contactus li:nth-child(1) {
+  color: var(--orange);
+  font-size: 2rem;
+  opacity: 1;
 }
 
 .follow ul {
-	display : flex;
+  display: flex;
 }
 
-.follow li{
-	margin: 1px 5px;
+.follow li {
+  margin: 1px 5px;
 }
 
-.contactus li{
-	opacity:1;
+.contactus li {
+  opacity: 1;
 }
 
-.contactCard div:nth-child(1){
-	font-size: 1rem;
-	opacity: 1;
+.contactCard div:nth-child(1) {
+  font-size: 1rem;
+  opacity: 1;
 }
 
-.contactCard div:nth-child(2){
-	opacity: 0.5;
-	font-size: 1.2rem;
-	transform: scale(1);
-	transition: all 0.2s ease-in-out;
+.contactCard div:nth-child(2) {
+  opacity: 0.5;
+  font-size: 1.2rem;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
 }
-.contactCard div:nth-child(2):hover{
-	opacity: 1;
+.contactCard div:nth-child(2):hover {
+  opacity: 1;
+}
+.content {
+  display: flex;
+  flex-direction: row;
 }
 
 @media only screen and (max-width: 900px) {
-	.menu{
-		display: none;
-	}
+  .menu {
+    display: none;
+  }
 
-	.footer-main{
-		flex-direction: column;
-		padding-bottom: 100px;
-	}
+  .footer-main {
+    flex-direction: column;
+    padding-bottom: 100px;
+  }
 
-	.logo{
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	.logo img{
-		width: 40%;
-	}
+  .logo img {
+    width: 40%;
+  }
 
-	.follow .contactus{
-		font-size: 1rem;
-	}
+  .follow .contactus {
+    font-size: 1rem;
+  }
 
-	.menu li:nth-child(1), .follow .heading, .contactus li:nth-child(1){
-		font-size: 1.5rem;
-	}
+  .menu li:nth-child(1),
+  .follow .heading,
+  .contactus li:nth-child(1) {
+    font-size: 1.5rem;
+  }
 }

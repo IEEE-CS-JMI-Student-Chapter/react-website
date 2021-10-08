@@ -1,82 +1,67 @@
-import React from 'react';
+import React from "react";
+import ReactDOM from "react-dom";
 import classes from "./Footer.module.css";
 import logo from "./landingLogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as icons from "@fortawesome/free-brands-svg-icons";
+import Button from "../UI/Button/Button";
+import ContactForm from "../Forms/ContactForm";
+import Backdrop from "../UI/Backdrop/Backdrop";
 
 const Footer = () => {
+  const [isContactOpen, setIsContactOpen] = React.useState(false);
+  const contactModalHandler = () => {
+    setIsContactOpen((prevState) => !prevState);
+  };
 
-    const contactUs = [
-        {
-            name: "Email",
-            value: "ieeecsjmi@gmail.com"
-        },
-        {
-            name: "Phone",
-            value: "+91-7303435034"
-        }
-    ]
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
 
-    return (
-        <section className={classes["footer-main"]}>
-            <div className={classes['logo']}>
-                <img src={logo} />
-            </div>
-            <div className={classes["menu"]}>
-                <ul>
-                    <li>
-                        Menu
-                    </li>
-                    <li>
-                        Home
-                    </li>
-                    <li>
-                        Teams
-                    </li>
-                    <li>
-                        Heads
-                    </li>
-                    <li>
-                        Events
-                    </li>
-                </ul>
-            </div>
-            <div className={classes["follow"]}>
-                <div className={classes["heading"]}>
-                    Follow Us On
-                </div>
-                <ul>
-                    <li>
-                        <FontAwesomeIcon icon={icons.faInstagram} />
-                    </li>
-                    <li>
-                        <FontAwesomeIcon icon={icons.faLinkedinIn}/>
-                    </li>
-                </ul>
-            </div>
-            <div className={classes["contactus"]}>
-                <ul>
-                    <li>
-                        Contact Us
-                    </li>
-                    <li>
-                        {contactUs.map((contact,index) => {
-                            return(
-                                <div className={classes["contactCard"]}>
-                                    <div>
-                                        {contact.name}
-                                    </div>
-                                    <div>
-                                        {contact.value}
-                                    </div>
-                                </div>
-                            )
-                        })}
-                    </li>
-                </ul>
-            </div>
-        </section>
-    );
-}
+  const submitHandler = () => {
+    console.log("Your response has been rejected!");
+  };
+
+  return (
+    <section className={classes["footer-main"]}>
+      <Button onClick={() => contactModalHandler()}>Contact</Button>
+      {isContactOpen &&
+        ReactDOM.createPortal(
+          <ContactForm onSubmit={submitHandler} onClose={closeContactModal} />,
+          document.getElementById("modal")
+        )}
+      {isContactOpen &&
+        ReactDOM.createPortal(
+          <Backdrop />,
+          document.getElementById("backdrop")
+        )}
+      <div className={classes.content}>
+        <div className={classes["logo"]}>
+          <img src={logo} />
+        </div>
+        <div className={classes["menu"]}>
+          <ul>
+            <li>Menu</li>
+            <li>Home</li>
+            <li>Teams</li>
+            <li>Heads</li>
+            <li>Events</li>
+          </ul>
+        </div>
+        <div className={classes["follow"]}>
+          <div className={classes["heading"]}>Follow Us On</div>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={icons.faInstagram} />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={icons.faLinkedinIn} />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default Footer;

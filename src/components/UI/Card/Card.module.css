@@ -1,0 +1,13 @@
+:root {
+  --grey: #2a333d;
+  --white: #fff;
+  --white-bg: #f4f4f4;
+  --orange: #ffa236;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
