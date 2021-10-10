@@ -28,7 +28,10 @@ function ContactForm(props) {
               return (
                 <div key={index} className={classes["contactCard"]}>
                   <div>
-                    {contact.name}: {contact.value}
+                    {contact.name}
+                  </div>
+                  <div>
+                    {contact.value}
                   </div>
                 </div>
               );
@@ -41,12 +44,14 @@ function ContactForm(props) {
 
           <label htmlFor="subject-id">Subject: </label>
           <input id="subject-id" placeholder="Enter subject..." />
-
+          
+          <label htmlFor="subject-id">Message: </label>
           <textarea
             name="message"
             id="message-id"
             cols="30"
             rows="10"
+            placeholder="Message"
           ></textarea>
           <Button>Send Message</Button>
         </form>
