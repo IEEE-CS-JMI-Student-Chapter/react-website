@@ -110,6 +110,12 @@ const Navbar = () => {
         >
           Contact
         </Button>
+        <Button onClick={() => {}} className={classes["login-button"]}>
+          Login
+        </Button>
+        <Button onClick={() => {}} className={classes["signup-button"]}>
+          Signup
+        </Button>
         {isContactOpen &&
           ReactDOM.createPortal(
             <ContactForm
