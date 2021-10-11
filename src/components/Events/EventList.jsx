@@ -32,7 +32,7 @@ const EventList = (props) => {
     return (
         <div className={eventClass}>
             <h1 className={classes.heading}>{heading}</h1>
-            <div className={classes["event-details"]}>
+            <div className={classes["event-block"]}>
                 {data && data.map((event) => {
                     return(
                         <EventCard 
