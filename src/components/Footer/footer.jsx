@@ -9,32 +9,8 @@ import ContactForm from "../Forms/ContactForm";
 import Backdrop from "../UI/Backdrop/Backdrop";
 
 const Footer = () => {
-  const [isContactOpen, setIsContactOpen] = React.useState(false);
-  const contactModalHandler = () => {
-    setIsContactOpen((prevState) => !prevState);
-  };
-
-  const closeContactModal = () => {
-    setIsContactOpen(false);
-  };
-
-  const submitHandler = () => {
-    console.log("Your response has been rejected!");
-  };
-
   return (
     <section className={classes["footer-main"]}>
-      <Button onClick={() => contactModalHandler()}>Contact</Button>
-      {isContactOpen &&
-        ReactDOM.createPortal(
-          <ContactForm onSubmit={submitHandler} onClose={closeContactModal} />,
-          document.getElementById("modal")
-        )}
-      {isContactOpen &&
-        ReactDOM.createPortal(
-          <Backdrop />,
-          document.getElementById("backdrop")
-        )}
       <div className={classes.content}>
         <div className={classes["logo"]}>
           <img src={logo} />

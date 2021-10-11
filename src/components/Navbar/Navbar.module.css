@@ -16,21 +16,23 @@
   z-index: 100;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
   transition: all 0.5s ease-in-out;
-
 }
 
 .nav-links {
   display: flex;
   height: 100%;
   transition: all 0.5s ease-in-out;
+}
 
+.contact-button {
+  padding: 5px 15px !important;
+  font-size: 15px !important;
 }
 
 @media (max-width: 768px) {
-  .nav-container{
+  .nav-container {
     justify-content: center;
     transition: all 0.5s ease-in-out;
-
   }
   .nav-links {
     display: none;
