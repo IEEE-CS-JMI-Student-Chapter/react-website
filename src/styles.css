@@ -21,3 +21,7 @@ a:hover {
   color: #fff;
   text-decoration: inherit;
 }
+
+div[class^="Snackbar_snackbar-wrapper"] {
+  z-index: 1100;
+}

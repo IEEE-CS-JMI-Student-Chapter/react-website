@@ -7,6 +7,7 @@ import * as icons from "@fortawesome/free-brands-svg-icons";
 import Button from "../UI/Button/Button";
 import ContactForm from "../Forms/ContactForm";
 import Backdrop from "../UI/Backdrop/Backdrop";
+import SnackbarProvider from 'react-simple-snackbar'
 
 const Footer = () => {
   const [isContactOpen, setIsContactOpen] = React.useState(false);
@@ -27,7 +28,9 @@ const Footer = () => {
       <Button onClick={() => contactModalHandler()}>Contact</Button>
       {isContactOpen &&
         ReactDOM.createPortal(
-          <ContactForm onSubmit={submitHandler} onClose={closeContactModal} />,
+          <SnackbarProvider>
+            <ContactForm onSubmit={submitHandler} onClose={closeContactModal} />
+            </SnackbarProvider>,
           document.getElementById("modal")
         )}
       {isContactOpen &&
