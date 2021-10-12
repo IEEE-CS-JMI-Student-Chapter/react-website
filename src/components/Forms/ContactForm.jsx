@@ -36,11 +36,12 @@ function ContactForm(props) {
 
   async function sendmessage(e){
     e.preventDefault();
-    const res = await axios.post('/api/sendmail',{
+    const res = await axios.post('https://vast-cove-87257.herokuapp.com/',{
       subject : Subject,
       mail : Email,
       message : Message
     });
+
 
     openSnackbar('Message Sent Successfully!')
     
