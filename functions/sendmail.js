@@ -9,6 +9,8 @@ var transporter = nodemailer.createTransport({
   }
 });
 
+console.log(transporter);
+
 function sendMail(subject, mail, body) {
   const html = `${mail}<br /> ${body}`;
   const mailOptions = {
