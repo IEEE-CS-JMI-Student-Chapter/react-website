@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport({
 
 console.log(transporter);
 
-function sendMail(subject, mail, body) {
+async function sendMail(subject, mail, body) {
   const html = `${mail}<br /> ${body}`;
   const mailOptions = {
     from: 'ieeecsjmimails@gmail.com', // sender address
@@ -21,7 +21,7 @@ function sendMail(subject, mail, body) {
   };
 
 
-  transporter.sendMail(mailOptions, function (err, info) {
+  await transporter.sendMail(mailOptions, function (err, info) {
     if (err)
       console.log(err)
     else
@@ -40,7 +40,7 @@ exports.handler = async (e) => {
   {
     data = JSON.parse(e.body);
     console.log(data);
-    sendMail(data.subject,data.mail,data.message)
+    await sendMail(data.subject,data.mail,data.message)
     return {
       statusCode: 200,
       body: "Message has been sent"
