@@ -10,6 +10,19 @@ import Backdrop from "../UI/Backdrop/Backdrop";
 import SnackbarProvider from 'react-simple-snackbar'
 
 const Footer = () => {
+  const [isContactOpen, setIsContactOpen] = React.useState(false);
+  const contactModalHandler = () => {
+    setIsContactOpen((prevState) => !prevState);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
+
+  const submitHandler = () => {
+    console.log("Your response has been rejected!");
+  };
+
   return (
     <section className={classes["footer-main"]}>
       <Button onClick={() => contactModalHandler()}>Contact</Button>
