@@ -21,3 +21,20 @@ a:hover {
   color: #fff;
   text-decoration: inherit;
 }
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+  }
+  ::-webkit-scrollbar-thumb{
+  background: #BDBDBD;
+  border-radius: 30px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background: #B3AFB3;
+  }
+  ::-webkit-scrollbar-track{
+  background: #F0F0F0;
+  border-radius: 0px;
+  box-shadow: inset 4.2px 0px 0px 0px #F0F0F0;
+  }

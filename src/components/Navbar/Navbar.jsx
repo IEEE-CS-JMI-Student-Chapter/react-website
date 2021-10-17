@@ -3,11 +3,11 @@ import classes from "./Navbar.module.css";
 import NavBrand from "./NavBrand";
 import NavItem from "./NavItem";
 import NavActive from "./NavActive";
-import { useLocation } from "react-router";
+import { useLocation, useHistory } from "react-router";
 
 const Navbar = () => {
   const location = useLocation();
-
+  const history = useHistory();
   const handlePath = () => {
     switch (location.pathname) {
       case "/":
@@ -19,7 +19,7 @@ const Navbar = () => {
       case "/events":
         return 3;
       default:
-        return 0;
+        return 3;
     }
   };
   const [pos, setpos] = useState(0);
@@ -74,7 +74,7 @@ const Navbar = () => {
 
   return (
     <nav className={classes["nav-container"]}>
-      <NavBrand logo={"/assets/ieeecs_logo.svg"} />
+      <NavBrand logo={"/assets/ieeecs_logo.svg"} onClick={() => history.push("/")}/>
       <div className={classes["nav-links"]}>
         {NavInfo.map((item, index) => {
           return (

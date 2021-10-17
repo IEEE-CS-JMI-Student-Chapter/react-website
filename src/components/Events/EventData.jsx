@@ -1,11 +1,11 @@
 const events = {
-    live: [
+    upcoming: [
         {
             id: 1,
             title: "DSA CODING COMPETITION",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",
-            date: "Today",
+            date: "Tommorow",
             link: "https://www.google.com/search?q=kya+hi+hota+hai+galat&sxsrf=AOaemvLIYrPbiALecnQl2RzP5PKVv1dMiw:1632540696166&source=lnms&tbm=isch&sa=X&ved=2ahUKEwisrJqCmJnzAhVs7XMBHXMhBVAQ_AUoAXoECAEQAw"
         },
         {
@@ -13,11 +13,9 @@ const events = {
             title: "CS/ IT DEBATE",
             startTime: "2:00 P.M.",
             endTime: "4:30 P.M.",
-            date: "Today",
+            date: "Tommorrow",
             link: "https://www.google.com/search?q=kya+hi+hota+hai+galat&sxsrf=AOaemvLIYrPbiALecnQl2RzP5PKVv1dMiw:1632540696166&source=lnms&tbm=isch&sa=X&ved=2ahUKEwisrJqCmJnzAhVs7XMBHXMhBVAQ_AUoAXoECAEQAw"
-        }
-    ],
-    upcoming: [
+        },
         {
             id: 1,
             title: "DSA CODING COMPETITION",

@@ -14,7 +14,7 @@ const LogoContainer = styled.div`
 const NavBrand = (props) => {
   return (
     <LogoContainer>
-      <img src={props.logo} alt="logo" />
+      <img src={props.logo} alt="logo" onClick={props.onClick} />
     </LogoContainer>
   );
 };

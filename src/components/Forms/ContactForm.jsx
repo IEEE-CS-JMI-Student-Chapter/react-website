@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import classes from "./ContactForm.module.css";
 import Button from "../UI/Button/Button";
 import styled from "styled-components";
 import Card from "../UI/Card/Card";
+import axios from 'axios'
 
 function ContactForm(props) {
   const contactUs = [
@@ -15,6 +16,19 @@ function ContactForm(props) {
       value: "+91-7303435034",
     },
   ];
+
+  const [Name,setName] = useState("");
+  const [Email,setEmail] = useState("");
+  const [Message,setMessage] = useState("");
+
+
+  async function sendmessage(e){
+    e.preventDefaults();
+    await fetch('/api/sendmail',{
+      method: 'GET'
+    })
+  }
+
   return (
     <Card>
       <div className={classes["contactus"]}>
@@ -40,10 +54,10 @@ function ContactForm(props) {
         </ul>
         <form className={classes.sendmessage} onSubmit={props.onSubmit}>
           <label htmlFor="email-id">Email: </label>
-          <input id="email-id" placeholder="Enter e-mail..." />
+          <input id="email-id" placeholder="Enter e-mail..." value={Name} onChange={(e) => setName(e.target.value)}/>
 
           <label htmlFor="subject-id">Subject: </label>
-          <input id="subject-id" placeholder="Enter subject..." />
+          <input id="subject-id" placeholder="Enter subject..." value={Email} onChange={(e)=> setEmail(e.target.value)}/>
           
           <label htmlFor="subject-id">Message: </label>
           <textarea
@@ -52,8 +66,10 @@ function ContactForm(props) {
             cols="30"
             rows="10"
             placeholder="Message"
+            value={Message}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-          <Button>Send Message</Button>
+          <Button onClick={(e) => sendmessage(e)}>Send Message</Button>
         </form>
       </div>
     </Card>

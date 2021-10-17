@@ -13,9 +13,10 @@
 
 .live, .upcoming{
     width: 44vw;
+
 }
 .live .event-details, .upcoming .event-details {
-    height: 34.5vh;
+    height: 80vh;
     overflow-y: auto;
 }
 
@@ -25,6 +26,20 @@
 .previous .event-details {
     height: 80vh;
     overflow-y: auto;
+}
+
+.event-details p:nth-child(1){
+    font-size: 1.4rem;
+}
+
+.event-details p:nth-child(2){
+    font-size: 1rem;
+    color: black;
+}
+
+.event-details p:nth-child(2) span{
+    margin-left: 20px;
+    color: rgb(224, 92, 92);
 }
 
 .heading {
@@ -77,6 +92,13 @@
     font-size: 18px;
     line-height: 16px;
     color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.event-btn:hover{
+    background: white;
+
 }
 
 @media screen and (max-width: 768px) {
