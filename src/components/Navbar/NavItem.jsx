@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavHashLink  } from 'react-router-hash-link';
+import { NavHashLink } from "react-router-hash-link";
 const NavItemLink = styled(NavHashLink)`
   text-decoration: none;
   display: flex;
@@ -21,7 +21,12 @@ const NavItemLink = styled(NavHashLink)`
 
 const NavItem = (props) => {
   return (
-    <NavItemLink smooth={true} innerRef={props.innerRef} to={props.to} onClick={props.onClick}>
+    <NavItemLink
+      smooth={true}
+      innerRef={props.innerRef}
+      to={props.to}
+      onClick={props.onClick}
+    >
       {props.children}
     </NavItemLink>
   );

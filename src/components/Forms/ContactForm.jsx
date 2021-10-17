@@ -4,6 +4,16 @@ import Button from "../UI/Button/Button";
 import styled from "styled-components";
 import Card from "../UI/Card/Card";
 import axios from 'axios'
+import {withSnackbar ,useSnackbar} from 'react-simple-snackbar'
+
+
+const options = {
+  position: 'bottom-right',
+  style: {
+    backgroundColor: 'green'
+  },
+}
+
 
 function ContactForm(props) {
   const contactUs = [
@@ -17,16 +27,35 @@ function ContactForm(props) {
     },
   ];
 
-  const [Name,setName] = useState("");
+  const [Subject,setSubject] = useState("");
   const [Email,setEmail] = useState("");
   const [Message,setMessage] = useState("");
+  
 
+  const [openSnackbar, closeSnackbar] = useSnackbar(options)
 
   async function sendmessage(e){
-    e.preventDefaults();
-    await fetch('/api/sendmail',{
-      method: 'GET'
-    })
+    e.preventDefault();
+    const res = await axios.post('https://vast-cove-87257.herokuapp.com/',{
+      subject : Subject,
+      mail : Email,
+      message : Message
+    });
+
+
+    openSnackbar('Message Sent Successfully!')
+    
+  }
+
+
+  function setDisable()
+  {
+    if(Subject == "" || Email == "" || Message == "")
+    {
+      return true;
+    }
+
+    return false;
   }
 
   return (
@@ -52,12 +81,12 @@ function ContactForm(props) {
             })}
           </li>
         </ul>
-        <form className={classes.sendmessage} onSubmit={props.onSubmit}>
+        <form className={classes.sendmessage} onSubmit={(event) => sendmessage(event)}>
           <label htmlFor="email-id">Email: </label>
-          <input id="email-id" placeholder="Enter e-mail..." value={Name} onChange={(e) => setName(e.target.value)}/>
+          <input id="email-id" placeholder="Enter e-mail..." value={Email} onChange={(e) => setEmail(e.target.value)}/>
 
           <label htmlFor="subject-id">Subject: </label>
-          <input id="subject-id" placeholder="Enter subject..." value={Email} onChange={(e)=> setEmail(e.target.value)}/>
+          <input id="subject-id" placeholder="Enter subject..." value={Subject} onChange={(e)=> setSubject(e.target.value)}/>
           
           <label htmlFor="subject-id">Message: </label>
           <textarea
@@ -69,11 +98,11 @@ function ContactForm(props) {
             value={Message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-          <Button onClick={(e) => sendmessage(e)}>Send Message</Button>
+          <Button disabled={setDisable()}>Send Message</Button>
         </form>
       </div>
     </Card>
   );
 }
 
-export default ContactForm;
+export default withSnackbar(ContactForm,options);

@@ -23,7 +23,7 @@
 .previous {
     width: 30vw;
 }
-.previous .event-details {
+.previous .event-block {
     height: 80vh;
     overflow-y: auto;
 }
@@ -108,6 +108,9 @@
     }    
     .live, .previous, .upcoming {
         width: 90vw;
+    }
+    .live .event-block, .upcoming .event-block, .previous .event-block {
+        height: unset;
     }
     .button-and-winner {
         align-items: flex-end;

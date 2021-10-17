@@ -1,13 +1,30 @@
 import React, { useState, useRef, useEffect } from "react";
+import ReactDOM from "react-dom";
 import classes from "./Navbar.module.css";
 import NavBrand from "./NavBrand";
 import NavItem from "./NavItem";
 import NavActive from "./NavActive";
 import { useLocation, useHistory } from "react-router";
+import Button from "./../UI/Button/Button";
+import ContactForm from "../Forms/ContactForm";
+import Backdrop from "../UI/Backdrop/Backdrop";
 
 const Navbar = () => {
+  const [isContactOpen, setIsContactOpen] = React.useState(false);
   const location = useLocation();
   const history = useHistory();
+
+  const contactModalHandler = () => {
+    setIsContactOpen((prevState) => !prevState);
+  };
+
+  const closeContactModal = () => {
+    setIsContactOpen(false);
+  };
+
+  const submitHandler = () => {
+    console.log("Your response has been rejected!");
+  };
   const handlePath = () => {
     switch (location.pathname) {
       case "/":
@@ -78,12 +95,40 @@ const Navbar = () => {
       <div className={classes["nav-links"]}>
         {NavInfo.map((item, index) => {
           return (
-            <NavItem key={index} innerRef={index === Click ? Buttonref : null} to={item.to} onClick={(e) => setactive(e, index)}>
+            <NavItem
+              key={index}
+              innerRef={index === Click ? Buttonref : null}
+              to={item.to}
+              onClick={(e) => setactive(e, index)}
+            >
               {item.name}
             </NavItem>
           );
         })}
-        <NavActive right={pos.right} width={pos.width} styles={{ left: pos.right !== undefined ? pos.right : 2200 }} />
+        <Button
+          onClick={() => contactModalHandler()}
+          className={classes["contact-button"]}
+        >
+          Contact
+        </Button>
+        {isContactOpen &&
+          ReactDOM.createPortal(
+            <ContactForm
+              onSubmit={submitHandler}
+              onClose={closeContactModal}
+            />,
+            document.getElementById("modal")
+          )}
+        {isContactOpen &&
+          ReactDOM.createPortal(
+            <Backdrop />,
+            document.getElementById("backdrop")
+          )}
+        <NavActive
+          right={pos.right}
+          width={pos.width}
+          styles={{ left: pos.right !== undefined ? pos.right : 2200 }}
+        />
       </div>
     </nav>
   );

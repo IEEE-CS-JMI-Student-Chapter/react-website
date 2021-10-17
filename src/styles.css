@@ -38,3 +38,6 @@ a:hover {
   border-radius: 0px;
   box-shadow: inset 4.2px 0px 0px 0px #F0F0F0;
   }
+div[class^="Snackbar_snackbar-wrapper"] {
+  z-index: 1100;
+}
