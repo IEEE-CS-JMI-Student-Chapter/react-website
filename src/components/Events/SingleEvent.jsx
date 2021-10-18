@@ -23,7 +23,7 @@ const SingleEvent = (props) => {
     const setloading = () => {
         return (
             <div className={style['loading']}>
-                <img src={loading} />
+                <img src={loading} alt="loading" />
             </div>
         )
     }

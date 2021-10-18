@@ -40,7 +40,7 @@ const Footer = () => {
         )}
       <div className={classes.content}>
         <div className={classes["logo"]}>
-          <img src={logo} />
+          <img src={logo} alt="logo" />
         </div>
         <div className={classes["menu"]}>
           <ul>

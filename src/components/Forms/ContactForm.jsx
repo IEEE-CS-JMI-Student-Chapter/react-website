@@ -50,7 +50,7 @@ function ContactForm(props) {
 
   function setDisable()
   {
-    if(Subject == "" || Email == "" || Message == "")
+    if(Subject === "" || Email === "" || Message === "")
     {
       return true;
     }
