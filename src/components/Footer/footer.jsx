@@ -7,8 +7,7 @@ import * as icons from "@fortawesome/free-brands-svg-icons";
 import Button from "../UI/Button/Button";
 import ContactForm from "../Forms/ContactForm";
 import Backdrop from "../UI/Backdrop/Backdrop";
-import SnackbarProvider from "react-simple-snackbar";
-import bgImage from "./../../images/bg_texture.png";
+import SnackbarProvider from 'react-simple-snackbar'
 
 const Footer = () => {
   const [isContactOpen, setIsContactOpen] = React.useState(false);
@@ -26,15 +25,12 @@ const Footer = () => {
 
   return (
     <section className={classes["footer-main"]}>
-      <div className={classes.overlay}></div>
-      <Button className={classes.level} onClick={() => contactModalHandler()}>
-        Contact
-      </Button>
+      <Button onClick={() => contactModalHandler()}>Contact</Button>
       {isContactOpen &&
         ReactDOM.createPortal(
           <SnackbarProvider>
             <ContactForm onSubmit={submitHandler} onClose={closeContactModal} />
-          </SnackbarProvider>,
+            </SnackbarProvider>,
           document.getElementById("modal")
         )}
       {isContactOpen &&

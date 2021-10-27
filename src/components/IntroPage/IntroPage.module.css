@@ -1,58 +1,60 @@
 :root {
-  --grey: #2a333d;
-  --white: #fff;
-  --white-bg: #f4f4f4;
-  --orange: #ffa236;
-}
-
-.intro-page-container {
-  background-color: var(--white-bg);
-  margin: 64px auto;
-  width: --webkit-fill-available;
-  margin-bottom: 100px;
-  padding: 50px 1rem;
-}
-
-.intro-container {
-  position: relative;
-  background: linear-gradient(102.4deg, var(--white) 0%, #ffffff 99.99%);
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.22);
-  border-radius: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.intro-text {
-  padding: 45px;
-  font-weight: bold;
-  line-height: 1.6;
-  font-size: 1.4rem;
-}
-span {
-  color: #ffa236;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.heading-text {
-  font-size: 3rem;
-}
-@media screen and (max-width: 768px) {
-  .logo {
-    flex-direction: column;
+    --grey: #2a333d;
+    --white: #fff;
+    --white-bg: #f4f4f4;
+    --orange: #ffa236;
   }
+  
+  .intro-page-container {
+    background-color: var(--white-bg);
+    margin: 64px auto;
+    width: --webkit-fill-available;
+    margin-bottom: 100px;
+    padding: 50px 1rem;
+  }
+
+  .intro-container {
+    position: relative;
+    background: linear-gradient(102.4deg, var(--white) 0%, #ffffff 99.99%);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.22);
+    border-radius: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
   .intro-text {
-    padding: 30px;
-    font-weight: bold;
-    line-height: 1.5;
-    font-size: 1.3rem;
+      padding: 45px;
+      font-weight: bold;
+      line-height: 1.6;
+      font-size: 1.40rem;
   }
+  span {
+      color:   #ffa236;
+  }
+
+
+  .logo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  } 
+
   .heading-text {
-    font-size: 2.5rem;
+    font-size: 3rem;;
   }
-}
+  @media screen and (max-width: 768px) {
+    .logo{
+      flex-direction: column;
+    }
+    .intro-text {
+      padding: 30px;
+      font-weight: bold;
+      line-height: 1.5;
+      font-size: 1.3rem;
+    }
+    .heading-text {
+      font-size: 2.5rem;;
+    }
+  }
+  
