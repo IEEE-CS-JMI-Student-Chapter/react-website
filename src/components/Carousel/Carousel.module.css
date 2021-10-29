@@ -19,7 +19,7 @@
   height: 60px;
   width: 60px;
   transition: all 0.3s ease-in-out;
-  z-index: 100;
+  z-index: 2;
 }
 .arrow:hover {
   background-color: var(--orange);
@@ -30,13 +30,11 @@
 .arrow-next {
   right: 0;
   top: 45%;
-  z-index: 0;
 }
 
 .arrow-prev {
   left: 0;
   top: 45%;
-  z-index: 0;
 }
 .indicator {
   display: inline-block;

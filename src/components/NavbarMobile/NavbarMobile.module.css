@@ -31,6 +31,9 @@
 .nav-item .nav-icon {
   font-size: 1.1rem;
 }
+.active.nav-item .nav-icon {
+  color: var(--white);
+}
 .nav-item .nav-title {
   color: #8199b6;
   font-size: 0.8rem;
