@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import * as icons from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import classes from "./TeamsSection.module.css";
 
 const TeamMember = (props) => {
@@ -22,17 +22,17 @@ const TeamMember = (props) => {
       <div className={`${classes["member-links"]} ${isLinkActive && classes["hovered"]}`}>
         {member.linkedin && (
           <a target="_blank" rel="noreferrer" href={member.linkedin}>
-            <FontAwesomeIcon icon={icons.faUserEdit} />
+            <FontAwesomeIcon icon={faLinkedin} />
           </a>
         )}
         {member.github && (
           <a target="_blank" rel="noreferrer" href={member.github}>
-            <FontAwesomeIcon icon={icons.faUserAstronaut} />
+            <FontAwesomeIcon icon={faGithub} />
           </a>
         )}
         {member.website && (
           <a target="_blank" rel="noreferrer" href={member.website}>
-            <FontAwesomeIcon icon={icons.faUserCheck} />
+            <FontAwesomeIcon icon={faGoogle} />
           </a>
         )}
       </div>
