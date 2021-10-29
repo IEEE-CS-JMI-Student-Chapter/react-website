@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import LazyLoad from 'react-lazyload';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub, faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import classes from "./TeamsSection.module.css";
 
 const TeamMember = (props) => {
@@ -17,7 +18,10 @@ const TeamMember = (props) => {
 
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className={`${classes.member}  ${member.head && classes["team-head"]}`}>
+     <LazyLoad height={200}> 
+     
       <img className={`${classes["member-image"]} ${isLinkActive && classes["hovered"]}`} src={member.img} alt={member.name} />
+     </LazyLoad>
       <p className={classes["member-name"]}>{member.name}</p>
       <div className={`${classes["member-links"]} ${isLinkActive && classes["hovered"]}`}>
         {member.linkedin && (
