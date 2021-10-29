@@ -105,6 +105,13 @@ const tabs = [
         linkedin: "https://www.linkedin.com/in/abbas-haider-96042b217",
         github: "https://github.com/abbash77",
       },
+      {
+        name: "Ayaz Zia Ansari",
+
+        img: "assets/teamMembers/ayaz.jpg",
+        linkedin: "https://www.linkedin.com/in/ayaz-zia-ansari-85564315b",
+        github: "https://github.com/Ayazzia01",
+      },
     ],
   },
   {
