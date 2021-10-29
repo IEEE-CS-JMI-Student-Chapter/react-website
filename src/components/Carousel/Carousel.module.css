@@ -84,6 +84,8 @@
 .item-container .image-section img {
   border-radius: 50%;
   width: 200px !important;
+  height: 200px !important;
+  object-fit: cover;
 }
 
 .item-container .image-section span {
@@ -102,6 +104,8 @@
   .item-container .image-section img {
     border-radius: 50%;
     width: 180px !important;
+    height: 180px !important;
+    object-fit: cover;
   }
 
   .arrow {
