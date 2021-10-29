@@ -1,3 +1,10 @@
+:root {
+    --grey: #2a333d;
+    --white: #fff;
+    --white-bg: #f4f4f4;
+    --orange: #ffa236;
+  }
+
 .container{
     display: flex;
     flex-direction: column;
@@ -30,8 +37,25 @@
     width: 60%;
     text-align: center;
 }
+
+.card img:nth-child(1){
+    width: 500px;
+}
+
+.card p a{
+    color: var(--orange)
+}
+
 @media screen and (max-width: 768px) {
+    .card h1{
+        text-align: center;
+    }
     .card p{
         width: 95%;
+        text-align: justify;
     }
+
+    .card img:nth-child(1){
+        width: 100%;
+    }    
 }
