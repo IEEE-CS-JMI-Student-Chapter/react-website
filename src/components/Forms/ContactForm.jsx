@@ -93,7 +93,7 @@ function ContactForm(props) {
               </li>
             </ul>
             {/* onSubmit={(event) => sendmessage(event)} */}
-            <form className={classes.sendmessage} name="contact" method="POST" data-netlify="true" action="/success/" onClick={() => {
+            <form className={classes.sendmessage} name="contact" method="POST" data-netlify="true" action="/success/" onSubmit={() => {
               history.push('/success')
             }}> 
             <input type="hidden" name="form-name" value="contact" />
