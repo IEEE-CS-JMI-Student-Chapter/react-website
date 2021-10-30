@@ -8,6 +8,7 @@ import { useLocation, useHistory } from "react-router";
 import Button from "./../UI/Button/Button";
 import ContactForm from "../Forms/ContactForm";
 import Backdrop from "../UI/Backdrop/Backdrop";
+import SnackbarProvider from 'react-simple-snackbar'
 
 const Navbar = () => {
   const [isContactOpen, setIsContactOpen] = React.useState(false);
@@ -113,10 +114,12 @@ const Navbar = () => {
         </Button>
         {isContactOpen &&
           ReactDOM.createPortal(
+            <SnackbarProvider>
             <ContactForm
               onSubmit={submitHandler}
               onClose={closeContactModal}
-            />,
+            />
+            </SnackbarProvider>,
             document.getElementById("modal")
           )}
         {isContactOpen &&
