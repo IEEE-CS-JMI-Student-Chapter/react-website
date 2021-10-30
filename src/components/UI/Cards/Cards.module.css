@@ -4,14 +4,30 @@
   --white-bg: #f4f4f4;
   --orange: #ffa236;
 }
-
 .landing-card {
   padding: 2vh 5vh;
   background-color: var(--grey);
+  position: relative;
+  background-image: url("./../../../images/bg_texture.png");
+  background-size: contain;
   /* margin: 64px auto; */
   height: 100vh;
   /* width: -webkit-fill-available;  */
   color: var(--white);
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--grey),
+    rgba(42, 51, 61, 0),
+    #00000000
+  );
+  width: 100%;
+  height: 98%;
+  z-index: 1;
 }
 
 .logo-svg-text {
@@ -26,6 +42,7 @@
   display: flex;
   flex-direction: column;
   width: 50%;
+  z-index: 2;
 }
 
 .logo-text img {
@@ -41,7 +58,7 @@
   color: #eee;
 }
 .highlight {
-  color: var(--orange) ;
+  color: var(--orange);
 }
 
 .link {
@@ -55,7 +72,7 @@
   text-decoration: none;
   margin-right: 5px;
 }
-.logo-text  span.letsGo {
+.logo-text span.letsGo {
   border-bottom: 1px solid #ffa236;
   transition: all 0.3s ease-in-out;
 }
@@ -68,8 +85,6 @@
   opacity: 1;
   margin-left: 0%;
 }
-
-
 
 .logo-text #icon {
   opacity: 0;
