@@ -95,15 +95,16 @@ function ContactForm(props) {
             {/* onSubmit={(event) => sendmessage(event)} */}
             <form className={classes.sendmessage} name="contact" method="POST" data-netlify="true">
               <label htmlFor="email-id">Email: </label>
-              <input id="email-id" placeholder="Enter e-mail..." value={Email} onChange={(e) => setEmail(e.target.value)} />
+              <input id="email-id" name="email" placeholder="Enter e-mail..." value={Email} onChange={(e) => setEmail(e.target.value)} />
 
               <label htmlFor="subject-id">Subject: </label>
-              <input id="subject-id" placeholder="Enter subject..." value={Subject} onChange={(e) => setSubject(e.target.value)} />
+              <input id="subject-id" name="subject" placeholder="Enter subject..." value={Subject} onChange={(e) => setSubject(e.target.value)} />
 
               <label htmlFor="subject-id">Message: </label>
               <textarea
                 name="message"
                 id="message-id"
+                name="Message"
                 cols="30"
                 rows="10"
                 placeholder="Message"
