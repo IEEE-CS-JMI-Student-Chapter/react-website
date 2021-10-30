@@ -41,7 +41,7 @@ const App = () => {
           <Route exact path="/events/:id">
             <SingleEvent events={events}/>
           </Route>
-          <Route exact path="/success/">
+          <Route path="/success">
             <Success />
           </Route>
         </Switch>

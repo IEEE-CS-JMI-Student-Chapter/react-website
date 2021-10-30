@@ -6,7 +6,7 @@ import Card from "../UI/Card/Card";
 import axios from 'axios'
 import loadingimg from "../../images/Loading.gif"
 import { withSnackbar, useSnackbar } from 'react-simple-snackbar'
-
+import { useHistory } from "react-router";
 
 const options = {
   position: 'bottom-right',
@@ -28,6 +28,7 @@ function ContactForm(props) {
     },
   ];
 
+  const history = useHistory();
   const [Subject, setSubject] = useState("");
   const [Email, setEmail] = useState("");
   const [Message, setMessage] = useState("");
@@ -92,7 +93,9 @@ function ContactForm(props) {
               </li>
             </ul>
             {/* onSubmit={(event) => sendmessage(event)} */}
-            <form className={classes.sendmessage} name="contact"  action="/sucess/" data-netlify="true">
+            <form className={classes.sendmessage} name="contact" onSubmit={() => {
+              history.push('/success')
+            }} data-netlify="true">
               <label htmlFor="email-id">Email: </label>
               <input id="email-id" placeholder="Enter e-mail..." value={Email} onChange={(e) => setEmail(e.target.value)} />
 
