@@ -28,7 +28,7 @@ const LandingCard = (props) => {
           </div>
           <div className={classes["link"]}>
             <span className={classes["letsGo"]}>
-              <a href="/#">Let's Go</a>
+              <a href="/events">Let's Go</a>
               <span id={classes["icon"]}>
                 <FontAwesomeIcon icon={icons.faAngleDoubleRight} />
               </span>
