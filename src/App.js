@@ -9,6 +9,9 @@ import ScrollToTop from "./helpers/ScrollToTop";
 
 import getEvents from "./Functions/getEvents";
 import SingleEvent from "./components/Events/SingleEvent";
+
+import Success from "./components/sucess/success";
+
 const App = () => {
 
 
@@ -37,6 +40,9 @@ const App = () => {
           </Route>
           <Route exact path="/events/:id">
             <SingleEvent events={events}/>
+          </Route>
+          <Route exact path="/success/">
+            <Success />
           </Route>
         </Switch>
       </Fragment>

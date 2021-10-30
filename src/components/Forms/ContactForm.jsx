@@ -91,7 +91,8 @@ function ContactForm(props) {
                 })}
               </li>
             </ul>
-            <form className={classes.sendmessage} onSubmit={(event) => sendmessage(event)}>
+            {/* onSubmit={(event) => sendmessage(event)} */}
+            <form className={classes.sendmessage} name="contact"  action="/sucess/" data-netlify="true">
               <label htmlFor="email-id">Email: </label>
               <input id="email-id" placeholder="Enter e-mail..." value={Email} onChange={(e) => setEmail(e.target.value)} />
 
