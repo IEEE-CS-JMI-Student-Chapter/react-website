@@ -21,7 +21,7 @@
 
 .previous {
   width: 30vw;
-  max-height: 80vh;
+  min-height: 85vh;
   margin-bottom: 100px;
 }
 
@@ -73,9 +73,11 @@
   flex-direction: row;
   justify-content: flex-end;
 }
-
+/* no, to many peeps in my room */
 .event-btn {
+  min-width: 9ch;
   width: fit-content;
+
   height: 36.13px;
   background: #ffa236;
   border: 2px solid #ffffff;

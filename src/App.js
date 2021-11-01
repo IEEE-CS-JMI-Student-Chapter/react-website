@@ -6,9 +6,12 @@ import Events from "./pages/Events";
 import "./styles.css";
 import MobileNav from "./components/NavbarMobile/MobileNav";
 import ScrollToTop from "./helpers/ScrollToTop";
-
+import Footer from "./components/Footer/Footer";
 import getEvents from "./Functions/getEvents";
 import SingleEvent from "./components/Events/SingleEvent";
+
+import Success from "./components/sucess/success";
+
 const App = () => {
 
 
@@ -38,7 +41,11 @@ const App = () => {
           <Route exact path="/events/:id">
             <SingleEvent events={events}/>
           </Route>
+          <Route path="/success">
+            <Success />
+          </Route>
         </Switch>
+        <Footer />
       </Fragment>
     </Router>
   );

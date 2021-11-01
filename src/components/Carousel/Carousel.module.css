@@ -73,6 +73,7 @@
 .item-container .carousel-text {
   padding: 0 1.2rem;
   max-width: 80ch;
+  text-align: justify;
 }
 
 .item-container .image-section {

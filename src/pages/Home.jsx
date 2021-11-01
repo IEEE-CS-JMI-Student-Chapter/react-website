@@ -3,7 +3,6 @@ import LandingCard from "../components/UI/Cards/LandingCard";
 import IntroPage from "../components/IntroPage/intro";
 import TeamsSection from "../components/TeamsSection/TeamSection";
 import Carousel from "../components/Carousel/Carousel";
-import Footer from "../components/Footer/footer";
 
 const CarouselData = [
   {
@@ -40,7 +39,6 @@ const Home = () => {
       <div className="carousel-section" id="leads">
         <Carousel CarouselData={CarouselData} />
       </div>
-      <Footer />
     </>
   );
 };
