@@ -30,7 +30,6 @@ const App = () => {
   return (
     <Router>
       <Fragment>
-        <ScrollToTop />
         <Navbar />
         <MobileNav />
         <Switch>
@@ -47,6 +46,8 @@ const App = () => {
         </Switch>
         <Footer />
       </Fragment>
+      <ScrollToTop />
+
     </Router>
   );
 };
