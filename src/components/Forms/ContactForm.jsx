@@ -7,6 +7,7 @@ import axios from 'axios'
 import loadingimg from "../../images/Loading.gif"
 import { withSnackbar, useSnackbar } from 'react-simple-snackbar'
 import { useHistory } from "react-router";
+import emailjs from 'emailjs-com';
 
 const options = {
   position: 'bottom-right',
@@ -40,13 +41,26 @@ function ContactForm(props) {
   async function sendmessage(e) {
     e.preventDefault();
     setloading(true);
-    const res = await axios.post('https://vast-cove-87257.herokuapp.com/', {
-      subject: Subject,
-      mail: Email,
-      message: Message
+
+
+    emailjs.sendForm('service_l73ka75', 'template_xywkrwi', e.target, 'user_6v8qqDVhV6cyYv9Dc7cW1')
+    .then((result) => {
+        console.log(result.text);
+        setloading(false);
+        openSnackbar('Message Sent Successfully!')
+        setSubject("")
+        setMessage("")
+        setEmail("")
+    }, (error) => {
+        setloading(false);
+        console.log(error.text);
     });
-    openSnackbar('Message Sent Successfully!')
-    setloading(false);
+
+    // const res = await axios.post('https://vast-cove-87257.herokuapp.com/', {
+    //   subject: Subject,
+    //   mail: Email,
+    //   message: Message
+    // });
   }
 
 
@@ -91,7 +105,7 @@ function ContactForm(props) {
             </li>
           </ul>
           {/* onSubmit={(event) => sendmessage(event)} */}
-          <form className={classes.sendmessage} name="contact" method="POST" data-netlify="true">
+          <form className={classes.sendmessage} name="contact"  onSubmit={(e) => sendmessage(e)}>
             <input type="hidden" name="form-name" value="contact" />
             <label htmlFor="email-id">Email: </label>
             <input id="email-id" name="email" placeholder="Enter e-mail..." value={Email} onChange={(e) => setEmail(e.target.value)} />
