@@ -6,7 +6,7 @@ import Events from "./pages/Events";
 import "./styles.css";
 import MobileNav from "./components/NavbarMobile/MobileNav";
 import ScrollToTop from "./helpers/ScrollToTop";
-
+import Footer from "./components/Footer/Footer";
 import getEvents from "./Functions/getEvents";
 import SingleEvent from "./components/Events/SingleEvent";
 
@@ -30,7 +30,6 @@ const App = () => {
   return (
     <Router>
       <Fragment>
-        <ScrollToTop />
         <Navbar />
         <MobileNav />
         <Switch>
@@ -45,7 +44,10 @@ const App = () => {
             <Success />
           </Route>
         </Switch>
+        <Footer />
       </Fragment>
+      <ScrollToTop />
+
     </Router>
   );
 };
