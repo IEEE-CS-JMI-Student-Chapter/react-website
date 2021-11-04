@@ -14,9 +14,9 @@
   padding: 5vh 1vw;
   justify-content: center;
   align-items: center;
-  background-image: url("./../../images/bg_texture.png");
+  background-image: url("../../images/bg_texture.png");
   background-repeat: repeat;
-  background-size: contain;
+  background-size: 720px;
 }
 
 .overlay {

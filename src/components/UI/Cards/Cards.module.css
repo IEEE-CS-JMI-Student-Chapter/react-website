@@ -8,8 +8,8 @@
   padding: 2vh 5vh;
   background-color: var(--grey);
   position: relative;
-  background-image: url("./../../../images/bg_texture.png");
-  background-size: contain;
+  background-image: url("../../../images/bg_texture.png");
+  background-size: 720px;
   /* margin: 64px auto; */
   height: 100vh;
   /* width: -webkit-fill-available;  */
