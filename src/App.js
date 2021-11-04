@@ -1,4 +1,4 @@
-import React, { Fragment, lazy, useEffect, useState } from "react";
+import React, { Fragment, lazy, Suspense, useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -6,10 +6,14 @@ import Events from "./pages/Events";
 import "./styles.css";
 import MobileNav from "./components/NavbarMobile/MobileNav";
 import ScrollToTop from "./helpers/ScrollToTop";
-
+import Footer from "./components/Footer/Footer";
 import getEvents from "./Functions/getEvents";
 import SingleEvent from "./components/Events/SingleEvent";
+import Success from "./components/sucess/success";
+import loading from "./images/Loading.gif";
+
 const Teams = lazy(() => import("./pages/Teams"));
+
 const App = () => {
   const [events, setevents] = useState({
     upcoming: [],
@@ -25,8 +29,9 @@ const App = () => {
   return (
     <Router>
       <Fragment>
-        <ScrollToTop />
         <Navbar />
+        <div className="overlay"></div>
+
         <MobileNav />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -34,14 +39,33 @@ const App = () => {
             <Events events={events} />
           </Route>
 
-          <Route exact path="/teams">
-            <Teams />
-          </Route>
+          <Suspense
+            fallback={
+              <div
+                style={{
+                  marginTop: "50vh",
+                  marginLeft: "50vw",
+                  transform: "translate(-50%, -50%)",
+                }}
+              >
+                <img src={loading} />
+              </div>
+            }
+          >
+            <Route exact path="/teams">
+              <Teams />
+            </Route>
+          </Suspense>
           <Route exact path="/events/:id">
             <SingleEvent events={events} />
           </Route>
+          <Route path="/success">
+            <Success />
+          </Route>
         </Switch>
+        <Footer />
       </Fragment>
+      <ScrollToTop />
     </Router>
   );
 };

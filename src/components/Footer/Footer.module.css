@@ -14,7 +14,7 @@
   padding: 5vh 1vw;
   justify-content: center;
   align-items: center;
-  background-image: url("./../../images/bg_texture.png");
+  background-image: url("../../images/bg_texture.png");
   background-repeat: repeat;
   background-size: contain;
 }
@@ -50,6 +50,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.menu ul {
+  min-width: 169px;
+  max-width: 169px;
+  max-height: 250px;
+  min-height: 250px;
 }
 
 .menu li,

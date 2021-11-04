@@ -9,6 +9,7 @@ import ContactForm from "../Forms/ContactForm";
 import Backdrop from "../UI/Backdrop/Backdrop";
 import SnackbarProvider from "react-simple-snackbar";
 import bgImage from "./../../images/bg_texture.png";
+import { NavHashLink } from "react-router-hash-link";
 
 const Footer = () => {
   const [isContactOpen, setIsContactOpen] = React.useState(false);
@@ -49,20 +50,40 @@ const Footer = () => {
         <div className={classes["menu"]}>
           <ul>
             <li>Menu</li>
-            <li>Home</li>
-            <li>Teams</li>
-            <li>Heads</li>
-            <li>Events</li>
+            <li>
+              <NavHashLink to="/#top">Home</NavHashLink>
+            </li>
+            <li>
+              <NavHashLink to="/#teams">Teams</NavHashLink>
+            </li>
+            <li>
+              <NavHashLink to="/#leads">Leads</NavHashLink>
+            </li>
+            <li>
+              <NavHashLink to="/events">Events</NavHashLink>
+            </li>
           </ul>
         </div>
         <div className={classes["follow"]}>
           <div className={classes["heading"]}>Follow Us On</div>
           <ul>
             <li>
-              <FontAwesomeIcon icon={icons.faInstagram} />
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.instagram.com/ieeecs_jmi/"
+              >
+                <FontAwesomeIcon icon={icons.faInstagram} />
+              </a>
             </li>
             <li>
-              <FontAwesomeIcon icon={icons.faLinkedinIn} />
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.linkedin.com/company/ieee-computer-society-jmi---student-chapter/mycompany/"
+              >
+                <FontAwesomeIcon icon={icons.faLinkedinIn} />
+              </a>
             </li>
           </ul>
         </div>
