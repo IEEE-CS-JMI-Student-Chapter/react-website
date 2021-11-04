@@ -64,7 +64,7 @@ const teams = [
   {
     id: 1,
     title: "ML/AI",
-    imageTitle: "assets/titleWebD.png",
+    imageTitle: "assets/titleAI.png",
     html: (
       <div>
         <p>
@@ -125,7 +125,7 @@ const teams = [
   {
     id: 2,
     title: "WebD",
-    imageTitle: "assets/titleAI.png",
+    imageTitle: "assets/titleWebD.png",
     html: (
       <div>
         <p>
