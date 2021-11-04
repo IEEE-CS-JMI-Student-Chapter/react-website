@@ -1,8 +1,8 @@
 .member-card {
   display: flex;
   flex-direction: column;
-  padding: 25px 10px;
-  height: 25vh;
+  padding: 15px 10px;
+  height: 15vw;
   max-width: 15vw;
   width: 15vw;
   align-items: center;
@@ -14,8 +14,8 @@
 }
 
 .member-card img {
-  width: 100px;
-  height: 100px;
+  width: calc(15vw * 0.6); /* 60% of card height and width */
+  height: calc(15vw * 0.6);
   image-rendering: 100dpi;
   object-fit: cover;
   border-radius: 50%;
@@ -23,9 +23,10 @@
 
 .name {
   color: var(--orange);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: bold;
   text-align: center;
+  margin: 0;
 }
 
 .socials {
