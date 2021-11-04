@@ -30,39 +30,39 @@ const App = () => {
     <Router>
       <Fragment>
         <Navbar />
-        <div className="overlay"></div>
-
         <MobileNav />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/events">
-            <Events events={events} />
-          </Route>
-
-          <Suspense
-            fallback={
-              <div
-                style={{
-                  marginTop: "50vh",
-                  marginLeft: "50vw",
-                  transform: "translate(-50%, -50%)",
-                }}
-              >
-                <img src={loading} />
-              </div>
-            }
-          >
-            <Route exact path="/teams">
-              <Teams />
+        <div className="main-container">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/events">
+              <Events events={events} />
             </Route>
-          </Suspense>
-          <Route exact path="/events/:id">
-            <SingleEvent events={events} />
-          </Route>
-          <Route path="/success">
-            <Success />
-          </Route>
-        </Switch>
+
+            <Suspense
+              fallback={
+                <div
+                  style={{
+                    marginTop: "50vh",
+                    marginLeft: "50vw",
+                    transform: "translate(-50%, -50%)",
+                  }}
+                >
+                  <img src={loading} />
+                </div>
+              }
+            >
+              <Route exact path="/teams">
+                <Teams />
+              </Route>
+            </Suspense>
+            <Route exact path="/events/:id">
+              <SingleEvent events={events} />
+            </Route>
+            <Route path="/success">
+              <Success />
+            </Route>
+          </Switch>
+        </div>
         <Footer />
       </Fragment>
       <ScrollToTop />

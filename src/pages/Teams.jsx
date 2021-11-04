@@ -11,7 +11,7 @@ const Teams = (props) => {
         <div className={classes["teams-container"]}>
           {/* <TeamHeader title={team.title} /> */}
           <img src={team.imageTitle} alt={team.imageTitle} />
-          <div className={classes.teams}>
+          <div className={classes.teams} style={{ zIndex: 2 }}>
             {team.members.map((member) => (
               <MemberCard member={member} />
             ))}
