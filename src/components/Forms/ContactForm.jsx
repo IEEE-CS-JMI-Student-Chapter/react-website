@@ -79,7 +79,7 @@ function ContactForm(props) {
         <div className={classes["contactus"]}>
 
           <div className={classes["loading"]}>
-            <img src={loadingimg} />
+            <img src={loadingimg} alt="loading" />
           </div>
         </div>
         :

@@ -41,7 +41,7 @@ const Footer = () => {
       {isContactOpen && ReactDOM.createPortal(<Backdrop />, document.getElementById("backdrop"))}
       <div className={classes.content}>
         <div className={classes["logo"]}>
-          <img src={logo} />
+          <img src={logo} alt=""/>
         </div>
         <div className={classes["menu"]}>
           <ul>
