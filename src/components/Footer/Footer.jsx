@@ -38,10 +38,14 @@ const Footer = () => {
           </SnackbarProvider>,
           document.getElementById("modal")
         )}
-      {isContactOpen && ReactDOM.createPortal(<Backdrop />, document.getElementById("backdrop"))}
+      {isContactOpen &&
+        ReactDOM.createPortal(
+          <Backdrop />,
+          document.getElementById("backdrop")
+        )}
       <div className={classes.content}>
         <div className={classes["logo"]}>
-          <img src={logo} />
+          <img src={logo} alt=""/>
         </div>
         <div className={classes["menu"]}>
           <ul>
@@ -64,12 +68,20 @@ const Footer = () => {
           <div className={classes["heading"]}>Follow Us On</div>
           <ul>
             <li>
-              <a rel="noreferrer" target="_blank" href="https://www.instagram.com/ieeecs_jmi/">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.instagram.com/ieeecs_jmi/"
+              >
                 <FontAwesomeIcon icon={icons.faInstagram} />
               </a>
             </li>
             <li>
-              <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/company/ieee-computer-society-jmi---student-chapter/mycompany/">
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://www.linkedin.com/company/ieee-computer-society-jmi---student-chapter/mycompany/"
+              >
                 <FontAwesomeIcon icon={icons.faLinkedinIn} />
               </a>
             </li>

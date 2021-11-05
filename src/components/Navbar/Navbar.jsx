@@ -8,7 +8,7 @@ import { useLocation, useHistory } from "react-router";
 import Button from "./../UI/Button/Button";
 import ContactForm from "../Forms/ContactForm";
 import Backdrop from "../UI/Backdrop/Backdrop";
-import SnackbarProvider from 'react-simple-snackbar'
+import SnackbarProvider from "react-simple-snackbar";
 
 const Navbar = () => {
   const [isContactOpen, setIsContactOpen] = React.useState(false);
@@ -30,12 +30,10 @@ const Navbar = () => {
     switch (location.pathname) {
       case "/":
         return 0;
-      case "/#teams":
+      case "/teams":
         return 1;
-      case "/#leads":
-        return 2;
       case "/events":
-        return 3;
+        return 2;
       default:
         return 3;
     }
@@ -77,13 +75,13 @@ const Navbar = () => {
       name: "Home",
     },
     {
-      to: "/#teams",
+      to: "/teams",
       name: "Teams",
     },
-    {
-      to: "/#leads",
-      name: "Leads",
-    },
+    // {
+    //   to: "/dleads",
+    //   name: "Leads",
+    // },
     {
       to: "/events",
       name: "Events",
@@ -92,7 +90,10 @@ const Navbar = () => {
 
   return (
     <nav className={classes["nav-container"]}>
-      <NavBrand logo={"/assets/ieeecs_logo.svg"} onClick={() => history.push("/")}/>
+      <NavBrand
+        logo={"/assets/ieeecs_logo.svg"}
+        onClick={() => history.push("/")}
+      />
       <div className={classes["nav-links"]}>
         {NavInfo.map((item, index) => {
           return (
@@ -115,10 +116,10 @@ const Navbar = () => {
         {isContactOpen &&
           ReactDOM.createPortal(
             <SnackbarProvider>
-            <ContactForm
-              onSubmit={submitHandler}
-              onClose={closeContactModal}
-            />
+              <ContactForm
+                onSubmit={submitHandler}
+                onClose={closeContactModal}
+              />
             </SnackbarProvider>,
             document.getElementById("modal")
           )}

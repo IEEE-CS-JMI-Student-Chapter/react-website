@@ -1,10 +1,13 @@
 :root {
-  --grey: #2a333d;
+  --grey: #e6e6e6;
   --white: #fff;
   --white-bg: #f4f4f4;
   --orange: #ffa236;
+  --gray: #c7ffcd93;
+  --darkBlue: #1c2229;
 }
 
 body {
+  position: relative;
   font-family: "Poppins", sans-serif;
 }

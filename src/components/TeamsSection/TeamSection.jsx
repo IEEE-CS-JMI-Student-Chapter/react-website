@@ -12,15 +12,20 @@ const TeamsSection = () => {
     <section className={classes["teams-sec-container"]} id="teams">
       <div className={classes["team-container"]}>
         <div className={classes["button-container"]}>
-          {tabs.map((tab) => {
+          {/* {tabs.map((tab) => {
             return (
-              <TabButton id={tab.id} key={tab.id} activeTab={activeTab === tab.id} setActiveTab={setActiveTab}>
+              <TabButton
+                id={tab.id}
+                key={tab.id}
+                activeTab={activeTab === tab.id}
+                setActiveTab={setActiveTab}
+              >
                 {tab.title}
               </TabButton>
             );
-          })}
+          })} */}
         </div>
-        <TabContent {...tabs[activeTab]} />
+        {/* <TabContent {...tabs[activeTab]} /> */}
       </div>
     </section>
   );
