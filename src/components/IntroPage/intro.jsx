@@ -7,7 +7,6 @@ const IntroPage = () => {
       <div className={classes["intro-container"]}>
         <div className={classes["intro-text"]}>
           <p className={classes["heading-text"]}>
-            {" "}
             What is <span>IEEE CS?</span>
           </p>
           <p>
@@ -16,14 +15,16 @@ const IntroPage = () => {
             IEEE CS is a technology - driven society established to empower
             people to bring about changes in the community. We are an expanding
             groups of professionals that lead in computing and connecting
-            members worldwide.{" "}
+            members worldwide.
           </p>
-        </div>
-      </div>
-      <div className={classes["logo"]}>
+          <div className={classes["logo"]}>
         <img src="assets/IEEECS.png" alt="IEEECS Logo" />
         <img src="assets/IEEEJMI.png" alt="IEEEJMI Logo" />
       </div>
+        </div>
+
+      </div>
+
     </section>
   );
 };

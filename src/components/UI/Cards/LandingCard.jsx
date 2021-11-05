@@ -5,6 +5,14 @@ import * as icons from "@fortawesome/free-solid-svg-icons";
 
 import { motion } from "framer-motion";
 
+import Svg from "../Svg/Svg"
+
+import OurTeamGraphic from "../../../images/Graphics/OurTeamGraphic.png"
+import OT_2 from "../../../images/Graphics/OT_2.svg"
+import semicircle from "../../../images/Graphics/semicircle.svg"
+import whitecover from "../../../images/Graphics/whitecover.png"
+
+
 const LandingCard = (props) => {
   const graphicdiv = useRef(null);
   const [graphic, setgraphic] = useState(0);

@@ -9,7 +9,14 @@ body {
   padding: 0;
   padding-top: 50px;
   font-family: "Poppins", sans-serif;
-  background-color: var(--white-bg);
+  background-color: var(--grey);
+  position: relative;
+  background-image: url("./images/bg_texture.png");
+  background-size: contain;
+  /* margin: 64px auto; */
+  height: 100vh;
+  /* width: -webkit-fill-available;  */
+  color: var(--white);
 }
 .carousel-section {
   background-color: var(--white-bg);
@@ -40,4 +47,10 @@ a:hover {
   }
 div[class^="Snackbar_snackbar-wrapper"] {
   z-index: 1100;
+}
+
+
+.landing-card {
+  padding: 2vh 5vh;
+
 }

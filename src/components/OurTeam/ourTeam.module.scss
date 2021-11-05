@@ -1,0 +1,121 @@
+$orange : #FAAC31;
+$black : #1b1b1b;
+$media-tablet: "only screen and (max-width : 1224px)";
+
+
+.Ourteam{
+    text-align: center;
+    h1{
+      color: $orange;
+      font-size: 3.5rem;
+      margin-bottom: 0.2%;
+    }
+    p{
+      font-size: 1.0rem;
+      font-weight: 500;
+      margin-top: 2%;
+      margin-bottom: 5%;
+      margin-left: 35%;
+      color: #818181;
+      width: 30%;
+    }
+    .OurTeam-div{
+      text-align: center;
+      .team-grid{
+        margin-left: 14%;
+        width: 70%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        .team-member{
+          width: 33%;
+          padding: 2%;
+          align-items: center;
+          display: inline-block;
+          h2{
+            color: rgb(226, 221, 221);
+            margin: 2% 0%;
+            font-size: 1.1rem;
+          }
+  
+          .linkedin{
+            position: absolute!important;
+            margin-left: -3%;
+            margin-top: 9%;
+            opacity: 0;
+            filter: brightness(1);
+            transition: all 0.5s;
+          }
+          
+          .Profile{
+            transition: all 0.5s;
+          }
+  
+          .Profile-pic{
+            filter:brightness(1);
+            transition: all 0.5s;
+          }
+  
+          .Profile:hover{
+            .Profile-pic{
+              filter:brightness(0.5);
+            }
+  
+            .linkedin{
+              opacity: 1;
+            }
+            .linkedin:hover{
+              filter: brightness(0.8); 
+            }
+          }
+  
+          p{
+            width: 100%;
+            margin-left: 0%;
+          }
+        }
+      }
+    }
+  }
+  
+@media #{$media-tablet} {
+    .Ourteam{
+        .fadeInDown{
+            text-align: center;
+            align-items: center;
+        }
+        p{
+            width: 90%;
+            margin: 0%;
+            margin-left: 5%;
+        }
+        .OurTeam-div{
+            
+            .team-grid{
+                margin-left: 4%;
+                width: 90%;
+                .team-member{
+                    padding: 3%;
+                    h2{
+                        font-size: 0.8rem;
+                    }
+                    .Profile-pic{
+                        width: 100%;
+                    }
+                    .linkedin{
+                        margin-top: 17%;
+                        margin-left: -10%;
+                    }
+                    p{
+                        font-size: 0.6rem;
+                    }
+                    .Profile-pic:hover{
+                        .linkedin{
+                            pointer-events: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
