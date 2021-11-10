@@ -8,7 +8,7 @@ import Button from "../UI/Button/Button";
 import ContactForm from "../Forms/ContactForm";
 import Backdrop from "../UI/Backdrop/Backdrop";
 import SnackbarProvider from "react-simple-snackbar";
-import bgImage from "./../../images/bg_texture.png";
+// import bgImage from "./../../images/bg_texture.png";
 import { NavHashLink } from "react-router-hash-link";
 
 const Footer = () => {

@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from "react-router-dom";
 import { Team } from "../../json/Team"
 import LinkdIn from "../../images/TeamMembers/Linkedin.svg"
 import style from "./ourTeam.module.scss"
@@ -35,9 +36,9 @@ function OurTeam() {
                         src={member.img}
                         alt={member.name}
                       />
-                      <a href="#">
-                        <img className={style["linkedin"]} src={LinkdIn} />
-                      </a>
+                      <Link to="/">
+                        <img className={style["linkedin"]} src={LinkdIn} alt="linkedIn" />
+                      </Link>
                     </div>
                     <h2>{member.name}</h2>
                     <p>{member.title}</p>

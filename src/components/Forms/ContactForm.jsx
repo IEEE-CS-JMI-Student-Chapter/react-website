@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import classes from "./ContactForm.module.css";
 import Button from "../UI/Button/Button";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Card from "../UI/Card/Card";
-import axios from "axios";
+// import axios from "axios";
 import loadingimg from "../../images/Loading.gif";
 import { withSnackbar, useSnackbar } from "react-simple-snackbar";
-import { useHistory } from "react-router";
+// import { useHistory } from "react-router";
 import emailjs from "emailjs-com";
 
 const options = {
@@ -28,7 +28,7 @@ function ContactForm(props) {
     },
   ];
 
-  const history = useHistory();
+  // const history = useHistory();
   const [Subject, setSubject] = useState("");
   const [Email, setEmail] = useState("");
   const [Message, setMessage] = useState("");

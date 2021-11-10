@@ -1,6 +1,6 @@
 import React from "react";
 import MemberCard from "../components/Teams/MemberCard";
-import TeamHeader from "../components/Teams/TeamHeader";
+// import TeamHeader from "../components/Teams/TeamHeader";
 import teams from "./../helpers/teams";
 import classes from "./../pages/Teams.module.css";
 

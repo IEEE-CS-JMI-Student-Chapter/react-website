@@ -47,7 +47,7 @@ const App = () => {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  <img src={loading} />
+                  <img src={loading} alt="Loading..." />
                 </div>
               }
             >

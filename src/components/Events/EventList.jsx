@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Events.module.css'
 import EventCard from './EventCard'
 import ColouredText from './ColouredText'
-import events from './EventData'
+// import events from './EventData'
 
 const EventList = (props) => {
     let heading,status, eventClass, btnText, btnColor;

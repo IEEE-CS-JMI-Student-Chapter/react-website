@@ -1,6 +1,6 @@
 import Sara from "../images/TeamMembers/SaraBatool.png"
 import Sarfraz from "../images/TeamMembers/MSarfrazAlam.png"
-import AlimSaleem from "../images/TeamMembers/AlimSaleem.png"
+// import AlimSaleem from "../images/TeamMembers/AlimSaleem.png"
 import Ayaz from "../images/TeamMembers/Ayaz.png"
 import Faizan from "../images/TeamMembers/Faizan.png"
 import Tirth from "../images/TeamMembers/Tirth.png"

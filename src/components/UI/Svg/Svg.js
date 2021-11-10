@@ -10,7 +10,7 @@ function Svg(prop) {
         right: prop.right? prop.right : 'auto',
         bottom: prop.bottom? prop.bottom : 'auto',
         zIndex: prop.zIndex? prop.zIndex : 'inherit',
-        transform: 'rotate(' + prop.rotate + 'deg)' + 'scale(' + prop.scale + ')',
+        transform: 'rotate(' + prop.rotate + 'deg) scale(' + prop.scale + ')',
         opacity: prop.opacity? prop.opacity : '1', 
         marginLeft: prop.marginLeft? prop.marginLeft : 'auto',
         marginRight: prop.marginRight? prop.marginRight : 'auto',
@@ -26,7 +26,7 @@ function Svg(prop) {
         right: prop.mright?prop.mright:prop.right?prop.right:'auto',
         bottom: prop.mbottom?prop.mbottom:prop.bottom?prop.bottom:'auto',
         zIndex: prop.mzIndex?prop.mzIndex:prop.zIndex?prop.zIndex:'inherit',
-        transform: 'rotate(' + prop.mrotate + 'deg)' + 'scale(' + prop.mscale + ')',
+        transform: 'rotate(' + prop.mrotate + 'deg) scale(' + prop.mscale + ')',
         marginLeft: prop.mobilemarginLeft? prop.mobilemarginLeft : 'auto',
         marginRight: prop.mobilemarginRight? prop.mobilemarginRight : 'auto',
         marginBottom: prop.mobilemarginBottom? prop.mobilemarginBottom : 'auto',
@@ -34,7 +34,7 @@ function Svg(prop) {
     }
     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' })
     return (
-        <img src={prop.src} style={isTabletOrMobile ? mediastyles : styles}  />
+        <img src={prop.src} style={isTabletOrMobile ? mediastyles : styles} alt="" />
     )
 }
 

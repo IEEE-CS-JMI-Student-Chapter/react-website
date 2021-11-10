@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react";
 // import styled from 'styled-components';
-import TabButton from "./TabButton";
+// import TabButton from "./TabButton";
 import classes from "./TeamsSection.module.css";
-import tabs from "./TabData";
-import TabContent from "./TabContent";
+// import tabs from "./TabData";
+// import TabContent from "./TabContent";
 
 const TeamsSection = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  console.log(activeTab);
+  // const [activeTab, setActiveTab] = useState(0);
+  // console.log(activeTab);
   return (
     <section className={classes["teams-sec-container"]} id="teams">
       <div className={classes["team-container"]}>
