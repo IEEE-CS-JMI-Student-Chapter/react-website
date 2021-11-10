@@ -52,7 +52,7 @@ function OurTeam() {
 
       <Svg src={semicircle} marginTop={-1800} marginLeft={500} rotate={30} scale={0.6}/>
       <Svg src={semicircle} marginTop={-800}  marginLeft={-300} rotate={30} scale={0.6} zIndex={-10} />
-      <Svg src={semicircle} marginTop={-800}  marginLeft={300} rotate={160} scale={0.6}  />
+      <Svg src={semicircle} marginTop={-800}  marginLeft={450} rotate={160} scale={0.6}  />
       <Svg src={semicircle} marginTop={-300} marginLeft={-400} rotate={80} scale={0.6}/>
       <Svg src={whitecover} rotate={10} scale={0.6} marginLeft={-600} marginTop={200}/>
 
