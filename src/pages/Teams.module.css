@@ -14,3 +14,12 @@
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 768px) {
+  .teams {
+    grid-template-columns: auto auto;
+  }
+  .teams-section-container {
+    margin: 0 15px;
+  }
+}

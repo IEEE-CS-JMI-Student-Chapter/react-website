@@ -40,3 +40,17 @@
 .social-link {
   margin: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  .member-card {
+    min-width: 35vw;
+    height: 35vw;
+  }
+  .member-card img {
+    width: calc(35vw * 0.6); /* 60% of card width */
+    height: calc(35vw * 0.6); /* 60% of card height */
+  }
+  .name {
+    font-size: 0.7rem;
+  }
+}
