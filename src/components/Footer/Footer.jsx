@@ -37,12 +37,14 @@ const Footer = () => {
             <ContactForm onSubmit={submitHandler} onClose={closeContactModal} />
           </SnackbarProvider>,
           document.getElementById("modal")
-        )}
+        )
+      }
       {isContactOpen &&
         ReactDOM.createPortal(
           <Backdrop />,
           document.getElementById("backdrop")
-        )}
+        )
+      }
       <div className={classes.content}>
         <div className={classes["logo"]}>
           <img src={logo} alt=""/>
