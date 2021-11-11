@@ -47,6 +47,9 @@ span {
   .logo {
     flex-direction: column;
   }
+  .logo img {
+    width: 90%;
+  }
   .intro-text {
     padding: 30px;
     font-weight: bold;
@@ -55,5 +58,7 @@ span {
   }
   .heading-text {
     font-size: 2.5rem;
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
   }
 }

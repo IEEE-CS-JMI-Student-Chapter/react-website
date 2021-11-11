@@ -38,13 +38,14 @@
   font-size: 1.5rem;
 }
 .social-link {
-  margin: 5px;
+  margin: 0 5px;
 }
 
 @media screen and (max-width: 768px) {
   .member-card {
     min-width: 35vw;
-    height: 35vw;
+    height: 40vw;
+    padding: 10px;
   }
   .member-card img {
     width: calc(35vw * 0.6); /* 60% of card width */

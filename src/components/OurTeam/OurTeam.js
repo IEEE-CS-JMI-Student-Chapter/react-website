@@ -14,9 +14,9 @@ function OurTeam() {
   return (
     <div className={style["Ourteam"]}>
       <h1>Our Team</h1>
-      <Svg src={OurTeamGraphic} marginLeft={400} marginTop={-100} />
-      <Svg src={OT_2} marginLeft={-740} marginTop={400}/>
-      <Svg src={whitecover} rotate={10} scale={0.8} marginLeft={-200} marginTop={-100}/>
+      <Svg mdisplay="none" src={OurTeamGraphic} marginLeft={400} marginTop={-100} />
+      <Svg mdisplay="none" src={OT_2} marginLeft={-740} marginTop={400}/>
+      <Svg mdisplay="none" src={whitecover} rotate={10} scale={0.8} marginLeft={-200} marginTop={-100}/>
 
       <p>
         “Coming together is a beginning. Keeping together is progress. Working
@@ -50,11 +50,11 @@ function OurTeam() {
         })}
       </div>
 
-      <Svg src={semicircle} marginTop={-1800} marginLeft={500} rotate={30} scale={0.6}/>
-      <Svg src={semicircle} marginTop={-800}  marginLeft={-300} rotate={30} scale={0.6} zIndex={-10} />
-      <Svg src={semicircle} marginTop={-800}  marginLeft={450} rotate={160} scale={0.6}  />
-      <Svg src={semicircle} marginTop={-300} marginLeft={-400} rotate={80} scale={0.6}/>
-      <Svg src={whitecover} rotate={10} scale={0.6} marginLeft={-600} marginTop={200}/>
+      <Svg src={semicircle} mdisplay="none" marginTop={-1800} marginLeft={500} rotate={30} scale={0.6}/>
+      <Svg src={semicircle} mdisplay="none" marginTop={-800}  marginLeft={-300} rotate={30} scale={0.6} zIndex={-10} />
+      <Svg src={semicircle} mdisplay="none" marginTop={-800}  marginLeft={450} rotate={160} scale={0.6}  />
+      <Svg src={semicircle} mdisplay="none" marginTop={-300} marginLeft={-400} rotate={80} scale={0.6}/>
+      <Svg src={whitecover} mdisplay="none" rotate={10} scale={0.6} marginLeft={-600} marginTop={200}/>
 
     </div>
   )

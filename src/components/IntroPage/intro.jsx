@@ -18,9 +18,9 @@ const IntroPage = () => {
             members worldwide.
           </p>
           <div className={classes["logo"]}>
-        <img src="assets/IEEECS.png" alt="IEEECS Logo" />
-        <img src="assets/IEEEJMI.png" alt="IEEEJMI Logo" />
-      </div>
+            <img src="assets/IEEECS.png" alt="IEEECS Logo" />
+            <img src="assets/IEEEJMI.png" alt="IEEEJMI Logo" />
+          </div>
         </div>
 
       </div>
