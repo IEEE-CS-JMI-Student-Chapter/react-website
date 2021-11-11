@@ -159,4 +159,7 @@
     border-bottom: 1px solid gray;
     margin-top: 45%;
   }
+  .contactInfo{
+    display: inline;
+  }
 }

@@ -97,8 +97,8 @@ function ContactForm(props) {
               {contactUs.map((contact, index) => {
                 return (
                   <div key={index} className={classes["contactCard"]}>
-                    <div>{contact.name}</div>
-                    <div>{contact.value}</div>
+                    <div className={classes["contactInfo"]}>{contact.name} :&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div className={classes["contactInfo"]}>{contact.value}</div>
                   </div>
                 );
               })}
