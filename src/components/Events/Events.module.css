@@ -1,121 +1,92 @@
 :root {
-  --grey: #2a333d;
-  --white: #fff;
-  --white-bg: #f4f4f4;
-  --orange: #ffa236;
-}
+    --grey: #2a333d;
+    --white: #fff;
+    --white-bg: #f4f4f4;
+    --orange: #ffa236;
+  }
 
-.events-container {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: var(--white-bg);
-}
 
-.live,
-.upcoming {
-  width: 44vw;
-}
-
-.previous {
-  width: 30vw;
-  min-height: 85vh;
-  margin-bottom: 100px;
-}
-
-.event-details h3 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.event-details p {
-  font-size: 1rem;
-  color: black;
-}
-
-.event-details p span {
-  font-size: inherit;
-  margin-left: 20px;
-  color: rgb(224, 92, 92);
-}
-
-.heading {
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 37px;
-  /* identical to box height */
-  color: #3d3b3b;
-  text-decoration: underline;
-  text-decoration-color: var(--orange);
-}
-
-.event-card {
-  margin-bottom: 2vh;
-  padding: 20px;
-  background: #e5e5e5;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 18px;
-  color: #3d3b3b;
-}
-
-.button-and-winner {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-/* no, to many peeps in my room */
-.event-btn {
-  min-width: 9ch;
-  width: fit-content;
-
-  height: 36.13px;
-  background: #ffa236;
-  border: 2px solid #ffffff;
-  box-sizing: border-box;
-  border-radius: 50px;
-  padding: auto 12px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  color: var(--white);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.event-btn:hover {
-  background: white;
-}
-
-@media screen and (max-width: 768px) {
-  .events-container {
+.list{
+    padding: 50px;
+    display:flex;
     flex-direction: column;
-    padding: 4vw;
-  }
-  .live,
-  .previous,
-  .upcoming {
-    width: 90vw;
-  }
-  .live .event-block,
-  .upcoming .event-block,
-  .previous .event-block {
-    height: unset;
-  }
-  .button-and-winner {
-    align-items: flex-end;
-  }
-  .event-btn {
-    height: 30px;
-    width: 90px;
-    font-size: 16px;
-  }
+    justify-content: center;
+    align-items: center;
+}
+
+.list .head{
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 2px;
+    border-bottom: 3px solid var(--orange);
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    width: 80vw;
+    padding: 15px;
+    margin-bottom: 35px;
+    background: rgba(251, 251, 251, 0.09);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .left{
+    flex-grow: 1;
+    width: 80%;
+}
+
+.card .left p{
+    margin: 0px;
+}
+
+.card .left p:nth-child(1){
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.card .left p:nth-child(2){
+    padding: 10px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.37);
+    padding-bottom: 15px;
+}
+
+.card .right{
+    width: 30%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .right p:nth-child(1){
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.card .right button{
+    padding: 10px 30px;
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: 3px solid var(--orange);
+    background: transparent;
+    color: var(--white);
+    transition: all 0.5s ease-in-out;
+}
+
+.card .right button:hover{
+    background: var(--white-bg);
+    color: var(--orange);
+    border-color: var(--white-bg);
 }

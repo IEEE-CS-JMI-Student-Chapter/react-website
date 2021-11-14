@@ -1,12 +1,14 @@
 import React from 'react'
-import EventList from '../components/Events/EventList'
 import classes from '../components/Events/Events.module.css'
+import EventsList from "../components/Events/assets/EventsList"
 
 const Events = ({events}) => {
+
+    console.log(events);
+
     return (
         <div className={classes["events-container"]}>
-            <EventList type="upcoming" data={events.upcoming}/>
-            <EventList type="previous" data={events.previous}/>
+            <EventsList events={events.previous} text="UPCOMING EVENTS"/>
         </div>
     )
 }
