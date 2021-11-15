@@ -41,6 +41,9 @@ function List({ events, text }) {
             <h1 className={classes['head']}>
                 {text}
             </h1>
+
+            {events.length == 0 ? <div class={classes["nothingtoshow"]}> Sorry Nothing to show here :/ </div> : null}
+
             <div className={classes['card-container']}>
                 {events.map((data) => {
                     return (<div className={classes['card']}>

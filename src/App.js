@@ -18,6 +18,7 @@ const App = () => {
   const [events, setevents] = useState({
     upcoming: [],
     previous: [],
+    state: false
   });
 
   useEffect(async () => {

@@ -29,6 +29,11 @@
   line-height: 1.6;
   font-size: 1.4rem;
 }
+
+.intro-text p:nth-child(2){
+  color: rgba(0, 0, 0, 0.603)
+}
+
 span {
   color: #ffa236;
 }

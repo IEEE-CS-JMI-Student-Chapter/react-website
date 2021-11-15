@@ -25,7 +25,8 @@ async function getEvents(){
 
     return ({
         upcoming : upcoming,
-        previous : previous
+        previous : previous,
+        state: true
     })
 }
 
