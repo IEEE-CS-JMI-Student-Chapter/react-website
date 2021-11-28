@@ -34,6 +34,9 @@ const App = () => {
         <MobileNav />
         <div className="main-container">
           <Switch>
+          <Route exact path="/events/:id">
+              <SingleEvent events={events} />
+            </Route>
             <Route exact path="/" component={Home} />
             <Route exact path="/events">
               <Events events={events} />
@@ -56,9 +59,7 @@ const App = () => {
                 <Teams />
               </Route>
             </Suspense>
-            <Route exact path="/events/:id">
-              <SingleEvent events={events} />
-            </Route>
+
             <Route path="/success">
               <Success />
             </Route>

@@ -47,6 +47,8 @@ const Navbar = () => {
     Buttonref.current = this;
   };
   const handleScroll = () => {
+    if(Buttonref.current == undefined)
+      return;
     let right = Buttonref.current.getBoundingClientRect().left;
     setpos({
       right: right,
@@ -55,11 +57,19 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    handleScroll();
-    window.addEventListener("resize", handleScroll);
+    if(Buttonref.current == null || Buttonref == null)
+      return;
+    else{
+      console.log(Buttonref.current)
+      handleScroll();
+      window.addEventListener("resize", handleScroll);  
+    }
   }, [Click]);
 
   useEffect(() => {
+    if(Buttonref.current == null || Buttonref == null)
+    return;
+
     setTimeout(() => {
       handleScroll();
     }, 100);

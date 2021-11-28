@@ -1,9 +1,9 @@
 import React,{useEffect,useState} from 'react'
-
+import { useHistory } from 'react-router';
 import classes from "../Events.module.css"
 
 function List({ events, text }) {
-
+    const history = useHistory();
     events.forEach(element => {
         console.log(element)
     });
@@ -24,18 +24,6 @@ function List({ events, text }) {
     month[10] = "Nov";
     month[11] = "Dec";
 
-    useEffect(() => {
-        // const date = new Date(events.Date);
-
-        // // setDate(`${date.getDay} ${month[date.getMonth()]} ${date.getYear()}`)
-        
-        // console.log(date.getDay())
-        // console.log(date.getMonth())
-
-
-    },[events]);
-
-
     return (
         <div className={classes[`list`]}>
             <h1 className={classes['head']}>
@@ -49,18 +37,20 @@ function List({ events, text }) {
                     return (<div className={classes['card']}>
                         <div className={classes['left']}>
                             <p>
-                                {data.EventName}
+                                {data.title}
                             </p>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tortor quis phasellus erat sollicitudin et. Elementum diam, facilisis donec proin mauris...........
+                                {data.excerpt}
                             </p>
                         </div>
                         <div className={classes['right']}>
                             <p>
-                                Date: {data.Date}
+                                Date: {data.date}
                             </p>
 
-                            <button>
+                            <button onClick={ () => {
+                                history.push(`/events/${data.slug}`)
+                            }}>
                                 More Info
                             </button>
                         </div>

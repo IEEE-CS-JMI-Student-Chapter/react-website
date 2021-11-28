@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import style from "./singleevent.module.css";
 import loading from "../../images/Loading.gif";
-import axios from "axios";
+import getSingleEvent from "../../Functions/SingleEvent"
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
@@ -13,9 +13,10 @@ const SingleEvent = (props) => {
 
   useEffect(async () => {
     if (id !== undefined) {
-      const info = await axios.get(`https://ieeecsbackend.herokuapp.com/events/${id}`);
-      console.log(info.data);
-      setdata(info.data);
+      const info = await getSingleEvent(id);
+      console.log("Single Event : ")
+      console.log(info)
+      setdata(info);
     }
   }, []);
 
@@ -30,8 +31,13 @@ const SingleEvent = (props) => {
   const EventData = () => {
     return (
       <div className={style["card"]}>
-        <h1>{data.EventName}</h1>
-        <ReactMarkdown children={data.Info} remarkPlugins={[remarkGfm]} escapeHtml={false} />
+        <h1>{data.title}</h1>
+        <div className={style["card-body"]}>
+        <img class={style["cover-photo"]} src={data.coverPhoto.url} />
+        <div className={style["card-body-content"]}>
+        <ReactMarkdown children={data.content.markdown} remarkPlugins={[remarkGfm]} escapeHtml={false} />
+        </div>
+        </div>
       </div>
     );
   };

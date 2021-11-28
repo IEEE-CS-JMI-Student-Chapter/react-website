@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .loading{
@@ -26,20 +27,33 @@
 }
 
 .card{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+
+}
+
+.card-body{
+    background-color: rgba(255, 255, 255, 0.205);
+    margin: 50px;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 0px 11px 20px 20px #0000000d;
+    box-sizing: border-box;
+    width: 90vw;
 }
 
 .card p{
-    width: 60%;
-    text-align: center;
+    padding: 10px 20px;
 }
 
-.card img:nth-child(1){
-    width: 500px;
+.cover-photo{
+    float: left;
+    padding: 25px;
+    width: 30%;
+    object-fit: contain;
 }
 
 .card p a{
@@ -47,15 +61,23 @@
 }
 
 @media screen and (max-width: 768px) {
+    .cover-photo{
+        float: none; 
+        width: 80%;
+    }
+    .card-body{
+        margin: 0px;
+    }
     .card h1{
         text-align: center;
     }
     .card p{
-        width: 95%;
         text-align: justify;
     }
 
-    .card img:nth-child(1){
+
+
+    .container{
         width: 100%;
-    }    
+    }
 }

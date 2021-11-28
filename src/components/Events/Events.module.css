@@ -82,6 +82,7 @@
     border: 3px solid var(--orange);
     background: transparent;
     color: var(--white);
+    cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
 
@@ -112,5 +113,33 @@
     font-size: 1.4rem;
     padding: 20px;
     color: rgba(0,0,0,0.37);
+
+}
+
+@media screen and (max-width: 768px) {
+    .list{
+        padding: 0px;
+    }
+
+    .card{
+        flex-direction: column;
+        width: 95vw;
+        padding: 5px;
+    }
+
+    .card .left{
+        width: auto;
+    }
+
+    .card .left p:nth-child(2){
+        padding: 0px;
+        font-weight: 300;
+    }
+
+    .card .right{
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
 
 }

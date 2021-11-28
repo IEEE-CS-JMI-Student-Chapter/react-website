@@ -9,7 +9,6 @@ async function getEvents() {
               id,
               title,
               date,
-              excerpt,
               slug
               content{
                   markdown
