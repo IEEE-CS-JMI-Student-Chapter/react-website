@@ -17,6 +17,7 @@ body {
   height: 100vh;
   /* width: -webkit-fill-available;  */
   color: var(--white);
+  scroll-behavior: smooth;
 }
 
 .main-container {

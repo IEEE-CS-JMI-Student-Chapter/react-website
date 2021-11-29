@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import classes from "./Cards.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as icons from "@fortawesome/free-solid-svg-icons";
+import { NavHashLink } from "react-router-hash-link";
 
 import { motion } from "framer-motion";
 
@@ -43,7 +44,7 @@ const LandingCard = (props) => {
           </div>
           <div className={classes["link"]}>
             <span className={classes["letsGo"]}>
-              <a href="/events">Let's Go</a>
+              <NavHashLink to="#intro">Let's Go</NavHashLink>
               <span id={classes["icon"]}>
                 <FontAwesomeIcon icon={icons.faAngleDoubleRight} />
               </span>

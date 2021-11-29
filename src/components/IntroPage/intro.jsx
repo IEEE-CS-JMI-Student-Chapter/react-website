@@ -3,7 +3,7 @@ import classes from "./IntroPage.module.css";
 
 const IntroPage = () => {
   return (
-    <section className={classes["intro-page-container"]}>
+    <section className={classes["intro-page-container"]} id="intro">
       <div className={classes["intro-container"]}>
         <div className={classes["intro-text"]}>
           <p className={classes["heading-text"]}>
