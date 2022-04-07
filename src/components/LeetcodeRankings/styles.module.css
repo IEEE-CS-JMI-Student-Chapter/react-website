@@ -1,0 +1,89 @@
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.name{
+    color: var(--white);
+    display: flex;
+}
+
+.username{
+    color: var(--orange);
+    margin: '5px 0px';
+}
+
+.table{
+    width: 80%;
+    border: none;
+    border-collapse:collapse
+}
+
+.headerRow{
+    background-color: var(--orange);
+}
+
+.cellClass{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.rowCell{
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.username{
+    margin-left: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+.inputGroup{
+    width: 40%;  
+    display: flex; 
+    padding: 10px;
+}
+
+.inputLabel{
+    width: 40%;
+    align-self: center;
+}
+
+.input{
+    width: 60%;
+    padding: 8px 10px; 
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 5px;
+    
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .table{
+        width: 100%;
+    }
+}

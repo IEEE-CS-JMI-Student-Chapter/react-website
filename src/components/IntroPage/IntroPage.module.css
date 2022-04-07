@@ -1,9 +1,3 @@
-:root {
-  --grey: #2a333d;
-  --white: #fff;
-  --white-bg: #f4f4f4;
-  --orange: #ffa236;
-}
 
 .intro-page-container {
   background: transparent;
@@ -34,9 +28,7 @@
   color: rgba(0, 0, 0, 0.603)
 }
 
-span {
-  color: #ffa236;
-}
+
 
 .logo {
   display: flex;
