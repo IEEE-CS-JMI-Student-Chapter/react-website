@@ -1,0 +1,47 @@
+import axios from "axios";
+import { faker } from "@faker-js/faker";
+
+export const addRanks = async (formData) => {
+  console.log("formData : ", formData);
+  const { data } = await axios.post(
+    "https://ieeecs-backend.herokuapp.com/lc/add",
+    formData
+  );
+
+  console.log(data);
+
+  return data;
+};
+
+export const getRanks = async () => {
+  const { data } = await axios.get(
+    "https://ieeecs-backend.herokuapp.com/lc/ranks"
+  );
+
+  console.log(data);
+  return data.data;
+};
+
+export const dummyData = ({ queryKey }) => {
+  const [, { count }] = queryKey;
+
+  const data = [];
+  const year = ["I", "II", "III", "IV"];
+  const branch = ["CSE", "ECE", "EE", "ME", "CE", "other"];
+  for (let i = 0; i < count; i++) {
+    data.push({
+      name: faker.name.findName(),
+      branch: branch[Math.floor(Math.random() * branch.length)],
+      ranking: faker.datatype.number({
+        min: 1,
+        max: 1000000,
+      }),
+      username: faker.internet.userName(),
+      year: year[Math.floor(Math.random() * year.length)],
+    });
+  }
+
+  console.log(data);
+
+  return data;
+};

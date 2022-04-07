@@ -26,7 +26,7 @@ const Navbar = () => {
   const submitHandler = () => {
     console.log("Your response has been rejected!");
   };
-  const handlePath = () => {
+  const handlePath = React.useCallback(() => {
     switch (location.pathname) {
       case "/":
         return 0;
@@ -34,10 +34,12 @@ const Navbar = () => {
         return 1;
       case "/events":
         return 2;
+      case "/leetcode":
+        return 3;
       default:
         return 3;
     }
-  };
+  }, [location.pathname]);
   const [pos, setpos] = useState(0);
   const [Click, setClick] = useState(handlePath());
   const Buttonref = useRef(null);
@@ -77,7 +79,7 @@ const Navbar = () => {
 
   useEffect(() => {
     setClick(handlePath);
-  }, [location.pathname]);
+  }, [handlePath, location.pathname]);
 
   const NavInfo = [
     {
@@ -88,14 +90,14 @@ const Navbar = () => {
       to: "/teams",
       name: "Teams",
     },
-    // {
-    //   to: "/dleads",
-    //   name: "Leads",
-    // },
     {
       to: "/events",
       name: "Events",
     },
+    {
+      to: '/leetcode',
+      name: "Leetcode Rankings"
+    }
   ];
 
   return (
