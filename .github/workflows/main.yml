@@ -1,0 +1,42 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build
+      run: npm run build
+    - name: Deploy Firebase Site
+      # You may pin to the exact commit or the version.
+      # uses: danielmillan/pipelines-firebase-hosting@8a7c15d150288fde37efe3edb186e5bb5931c3de
+      uses: danielmillan/pipelines-firebase-hosting@1.0.8
+      with:
+        # Token generated to authenticate in firebase
+        firebase-token: ${{ FIREBASE_TOKEN }}
+        # Name of the folder containing the resources to be deployed
+        resources-name: build
+        # Firebase project name
+        project-name: IEEE CS
