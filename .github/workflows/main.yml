@@ -35,7 +35,7 @@ jobs:
       uses: danielmillan/pipelines-firebase-hosting@1.0.8
       with:
         # Token generated to authenticate in firebase
-        firebase-token: ${{ FIREBASE_TOKEN }}
+        firebase-token: ${{ secrets.FIREBASE_TOKEN }}
         # Name of the folder containing the resources to be deployed
         resources-name: build
         # Firebase project name
