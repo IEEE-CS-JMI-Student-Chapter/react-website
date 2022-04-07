@@ -12,8 +12,14 @@ const MobileNav = () => {
       <NavItem to="/teams" icon={<FontAwesomeIcon icon={icons.faUsers} />}>
         Teams
       </NavItem>
-      <NavItem to="/events" icon={<FontAwesomeIcon icon={icons.faCalendarAlt} />}>
+      <NavItem
+        to="/events"
+        icon={<FontAwesomeIcon icon={icons.faCalendarAlt} />}
+      >
         Events
+      </NavItem>
+      <NavItem to="/leetcode" icon={<FontAwesomeIcon icon={icons.faCode} />}>
+        Leetcode
       </NavItem>
     </div>
   );

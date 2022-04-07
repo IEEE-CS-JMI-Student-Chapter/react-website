@@ -49,6 +49,10 @@ function LCRankings() {
       accessor: "ranking",
     },
     {
+      Header: "Total Solved",
+      accessor: "totalSolved",
+    },
+    {
       Header: "Year",
       accessor: "year",
     },

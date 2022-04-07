@@ -133,13 +133,14 @@ function AddForm() {
             marginTop: "2rem",
             borderRadius: "0.5rem",
             border: "none",
+            opacity: mutation.status === "loading" ? 0.5 : 1,
           }}
           onClick={(e) => {
             e.preventDefault();
             mutation.mutate(Form);
           }}
         >
-          <span>Submit</span>
+          {mutation.isLoading ? "Loading...." : "Submit"}
         </Button>
       </form>
     </div>
