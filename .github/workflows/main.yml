@@ -29,14 +29,9 @@ jobs:
       
     - name: Build
       run: npm run build
-    - name: Deploy Firebase Site
-      # You may pin to the exact commit or the version.
-      # uses: danielmillan/pipelines-firebase-hosting@8a7c15d150288fde37efe3edb186e5bb5931c3de
-      uses: danielmillan/pipelines-firebase-hosting@1.0.8
+    - name: GitHub Action for Firebase
+      uses: w9jds/firebase-action@v1.5.0
       with:
-        # Token generated to authenticate in firebase
-        firebase-token: ${{ secrets.FIREBASE_TOKEN }}
-        # Name of the folder containing the resources to be deployed
-        resources-name: build
-        # Firebase project name
-        project-name: IEEE CS
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
