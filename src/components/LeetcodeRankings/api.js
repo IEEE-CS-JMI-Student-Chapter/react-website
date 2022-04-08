@@ -1,7 +1,7 @@
 import axios from "axios";
 import { faker } from "@faker-js/faker";
 
-const API = "https://ieeecs-backend.herokuapp.com";
+const API = "https://ieeejmilcstats.herokuapp.com";
 // const API = "http://localhost:5000";
 
 export const addRanks = async (formData) => {
