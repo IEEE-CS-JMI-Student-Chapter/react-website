@@ -47,6 +47,9 @@ function LCRankings() {
     {
       Header: "Rank",
       accessor: "ranking",
+      defaultCanSort: true,
+      isSorted: true,
+      isSortedDesc: true,
     },
     {
       Header: "Total Solved",
@@ -72,14 +75,22 @@ function LCRankings() {
         Add your account
       </Button>
 
-      <Table
-        columns={columns}
-        data={data}
-        rootClassName={styles.table}
-        headerRowClassName={styles.headerRow}
-        rowCellClassName={styles.rowCell}
-        dataCellClassName={styles.cellClass}
-      />
+      <div className={styles.tableWeapper}>
+        <Table
+          columns={columns}
+          data={data}
+          rootClassName={styles.table}
+          headerRowClassName={styles.headerRow}
+          rowCellClassName={styles.rowCell}
+          dataCellClassName={styles.cellClass}
+          defaultSorted={[
+            {
+              id: "ranking",
+              desc: false,
+            },
+          ]}
+        />
+      </div>
     </div>
   );
 }

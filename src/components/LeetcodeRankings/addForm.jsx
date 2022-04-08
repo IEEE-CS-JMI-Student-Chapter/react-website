@@ -39,12 +39,13 @@ function AddForm() {
 
   return (
     <div className={styles.container}>
-      <h1>Add Your Leetcode Ranking</h1>
+      <h1 className={styles.heading}>Add Your Leetcode Ranking</h1>
       <p
         style={{
           opacity: 0.2,
           marginBottom: "50px",
         }}
+        className={styles.heading}
       >
         You can add your Leetcode ranking by filling the form below.
       </p>

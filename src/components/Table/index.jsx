@@ -18,6 +18,7 @@ function Table({
   dataCellClassName,
   rowCellClassName,
   headerRowClassName,
+  defaultSorted,
 }) {
   const {
     getTableProps,
@@ -39,7 +40,7 @@ function Table({
     {
       columns: userColumns,
       data,
-      initialState: { pageIndex: 0 },
+      initialState: { pageIndex: 0, sortBy: defaultSorted },
     },
     useSortBy,
     usePagination
