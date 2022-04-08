@@ -2,6 +2,8 @@ import React from "react";
 import { useTable, useSortBy, usePagination } from "react-table";
 import { IoCaretDownOutline } from "react-icons/io5";
 import styles from "./styles.module.css";
+import ReactTooltip from "react-tooltip";
+
 import {
   HiChevronDoubleLeft,
   HiChevronLeft,

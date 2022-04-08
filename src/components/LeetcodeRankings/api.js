@@ -1,12 +1,12 @@
 import axios from "axios";
 import { faker } from "@faker-js/faker";
 
+const API = "https://ieeecs-backend.herokuapp.com";
+// const API = "http://localhost:5000";
+
 export const addRanks = async (formData) => {
   console.log("formData : ", formData);
-  const { data } = await axios.post(
-    "https://ieeecs-backend.herokuapp.com/lc/add",
-    formData
-  );
+  const { data } = await axios.post(`${API}/lc/add`, formData);
 
   console.log(data);
 
@@ -14,12 +14,13 @@ export const addRanks = async (formData) => {
 };
 
 export const getRanks = async () => {
-  const { data } = await axios.get(
-    "https://ieeecs-backend.herokuapp.com/lc/ranks"
-  );
+  const { data } = await axios.get(`${API}/lc/ranks`);
 
   console.log(data);
-  return data.data;
+  return {
+    data: data.data,
+    lastUpdated: data.lastUpdated,
+  };
 };
 
 export const dummyData = ({ queryKey }) => {

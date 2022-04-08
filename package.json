@@ -32,6 +32,7 @@
     "react-scripts": "4.0.3",
     "react-simple-snackbar": "^1.1.11",
     "react-table": "^7.7.0",
+    "react-tooltip": "^4.2.21",
     "remark-gfm": "^3.0.0",
     "sendmail": "^1.6.1",
     "slick-carousel": "^1.8.1",

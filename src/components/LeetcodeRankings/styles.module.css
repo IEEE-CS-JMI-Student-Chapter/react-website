@@ -51,6 +51,14 @@
     margin-left: 10px;
 }
 
+.info{
+    opacity: 0.5;
+    font-size: 12px;
+    margin: 4px;
+    width: 80%;
+    padding: 1px;
+}
+
 .form{
     display: flex;
     flex-direction: column;
