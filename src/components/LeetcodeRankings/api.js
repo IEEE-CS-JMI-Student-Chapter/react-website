@@ -20,6 +20,7 @@ export const getRanks = async () => {
   return {
     data: data.data,
     lastUpdated: data.lastUpdated,
+    timeleft: 125 - data.timeleft,
   };
 };
 

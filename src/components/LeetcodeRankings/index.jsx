@@ -165,7 +165,9 @@ function LCRankings() {
       >
         Last Updated : {data.lastUpdated}
       </p>
-      <p className={styles.info}>*Data Refreshes in every 1-2 hours</p>
+      <p className={styles.info}>
+        *Data will refresh in {data.timeleft} minutes
+      </p>
 
       <div className={styles.tableWeapper}>
         <Table
