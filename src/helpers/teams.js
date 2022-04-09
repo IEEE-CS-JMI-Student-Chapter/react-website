@@ -17,24 +17,8 @@ const teams = [
 
     members: [
       {
-        name: "Anzal Husain Abedi",
-        head: true,
-        img: "assets/teamMembers/anzal.jpg",
-        linkedin: "https://www.linkedin.com/in/anzal-husain-abedi/",
-        github: "https://github.com/anzal1",
-      },
-
-      {
-        name: "Fazeel Rizvi",
-
-        img: "assets/teamMembers/fazeel.jpg",
-        linkedin: "https://www.linkedin.com/in/fazeel-rizvi-a497651b4/",
-        github: "https://github.com/fazcodev",
-      },
-
-      {
         name: "Shairin Meraj",
-
+        head: true,
         img: "assets/teamMembers/shairin.jpg",
         linkedin: "https://www.linkedin.com/in/shairin-meraj-451524202",
         github: "https://github.com/ShairinMeraj",
@@ -47,17 +31,52 @@ const teams = [
         github: "https://github.com/Sparshmahajan",
       },
       {
-        name: "Fardeen Husain",
-
-        img: "assets/teamMembers/fardeen.jpg",
-        linkedin: "https://www.linkedin.com/in/fardeen-hussain-0479b8202",
+        name: "Huzaif Malik",
+        img: "assets/teamMembers/huzaif.webp",
+        linkedin: "",
+        github: "",
       },
       {
-        name: "Lal Bihari Pandey",
-
-        img: "assets/teamMembers/lal-bihari.jpg",
-        linkedin: "https://www.linkedin.com/in/xpandeyed",
-        github: "https://github.com/xpandeyed",
+        name: "Ujjwal tyagi",
+        img: "assets/teamMembers/ujjwal.jpeg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Shehroz Alam",
+        img: "assets/teamMembers/shehroz.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Kovid Sharma",
+        img: "assets/teamMembers/kovid.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Eram Merchant",
+        img: "assets/teamMembers/eram.jpeg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Shivang Mishra",
+        img: "assets/teamMembers/shivang.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Shania Parween",
+        img: "assets/teamMembers/shaina.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Mohammad Anas Jamil",
+        img: "assets/teamMembers/anas.jpeg",
+        linkedin: "",
+        github: "",
       },
     ],
   },
@@ -79,46 +98,47 @@ const teams = [
 
     members: [
       {
-        name: "Mohammed Abbas Ansari",
-        head: true,
-        img: "assets/teamMembers/abbas.jpg",
-        linkedin: "https://www.linkedin.com/in/abbas-ansari-2001/",
-        github: "https://github.com/King-of-Haskul",
-      },
-      {
-        name: "Md. Haider Zama",
-
-        img: "assets/teamMembers/haider.jpg",
-        linkedin: "https://www.linkedin.com/in/md-haider-zama-3937a8218/",
-        github: "https://github.com/haiderzm",
-      },
-      {
         name: "Mohammed Kashif",
-
+        head: true,
         img: "assets/teamMembers/kashif.jpg",
         linkedin: "https://www.linkedin.com/in/mohammad-kashif-2b7429210/",
         github: "https://github.com/M0hammad-Kashif",
       },
       {
-        name: "Tirth Dalwadi",
-
-        img: "assets/teamMembers/tirth.jpg",
-        linkedin: "https://www.linkedin.com/in/tirth-dalwadi-0513911b7",
-        github: "https://github.com/Tirth-AI",
+        name: "Md. Haider Zama",
+        img: "assets/teamMembers/haider.jpg",
+        linkedin: "https://www.linkedin.com/in/md-haider-zama-3937a8218/",
+        github: "https://github.com/haiderzm",
       },
       {
         name: "Abbas Haider",
-
         img: "assets/teamMembers/abbas-haider.jpg",
         linkedin: "https://www.linkedin.com/in/abbas-haider-96042b217",
         github: "https://github.com/abbash77",
       },
       {
-        name: "Ayaz Zia Ansari",
-
-        img: "assets/teamMembers/ayaz.jpg",
-        linkedin: "https://www.linkedin.com/in/ayaz-zia-ansari-85564315b",
-        github: "https://github.com/Ayazzia01",
+        name: "Erfan Naseri Taheri",
+        img: "assets/teamMembers/erfan.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Sania Ahmad",
+        img: "assets/teamMembers/sania.jpeg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Hammad Faizvi",
+        img: "assets/teamMembers/hammad.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Gaurav Singh Yadav",
+        img: "assets/teamMembers/gaurav.jpg",
+        linkedin: "",
+        github: "",
       },
     ],
   },
@@ -174,6 +194,76 @@ const teams = [
         img: "assets/teamMembers/shoeb.jpg",
         linkedin: "https://www.linkedin.com/in/shoeb-ilyas/",
         github: "https://github.com/shoebilyas123",
+      },
+      {
+        name: "Ayesha Khan",
+        img: "assets/teamMembers/ayesha.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Tathagat Vats",
+        img: "assets/teamMembers/tathagat.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Asad Sarfaraz",
+        img: "assets/teamMembers/asad.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Syed Shahan Hussain",
+        img: "assets/teamMembers/shahan.jpg",
+        linkedin: "",
+        github: "",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Android",
+    imageTitle: "assets/titleAndroid.png",
+    html: (
+      <div>
+        <p>
+          We aim to provide exposure to the aspirants about the world of
+          development and design. Our Web Development team aim to give aspirants
+          the right kind of exposure, learning environment and on point industry
+          requirements to get started. We, IEEECS, aim to provide exposure to
+          the aspirants about the world of development and designing where they
+          can get the best knowledge & experience before they really start
+          working.
+        </p>
+      </div>
+    ),
+
+    members: [
+      {
+        name: "Lal Bihari Pandey",
+        head: true,
+        img: "assets/teamMembers/lal-bihari.jpg",
+        linkedin: "https://www.linkedin.com/in/husain3012/",
+        github: "https://github.com/husain3012",
+      },
+      {
+        name: "Mohammad Shadab",
+        img: "assets/teamMembers/shadab.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Abdullah Kalim",
+        img: "assets/teamMembers/abdullah-kalim.jpg",
+        linkedin: "",
+        github: "",
+      },
+      {
+        name: "Mohammad Noor E Ain",
+        img: "assets/teamMembers/nooreain.jpg",
+        linkedin: "",
+        github: "",
       },
     ],
   },
