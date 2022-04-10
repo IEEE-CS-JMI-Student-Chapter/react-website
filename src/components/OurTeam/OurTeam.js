@@ -43,7 +43,7 @@ function OurTeam() {
                 return (
                   <div className={style["team-member"]}>
                     <div className={style["Profile"]}>
-                      <LazyLoad height={200}>
+                      <LazyLoad height={600}>
                         <img
                           className={style["Profile-pic"]}
                           src={member.img}
