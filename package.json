@@ -65,6 +65,8 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^6.1.2",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
     "prettier": "^2.6.2"
   }
 }

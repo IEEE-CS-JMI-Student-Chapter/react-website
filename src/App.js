@@ -14,6 +14,7 @@ import loading from "./images/Loading.gif";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import AddForm from "./components/LeetcodeRankings/addForm";
+import Resources from "./pages/Resources";
 // import LCRankings from "./components/LeetcodeRankings";
 
 const queryClient = new QueryClient();
@@ -74,6 +75,9 @@ const App = () => {
                 </Route>
                 <Route exact path="/leetcode/add">
                   <AddForm />
+                </Route>
+                <Route exact path="/resources">
+                  <Resources />
                 </Route>
               </Suspense>
 

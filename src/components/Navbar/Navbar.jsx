@@ -36,6 +36,8 @@ const Navbar = () => {
         return 2;
       case "/leetcode":
         return 3;
+      case "/resources":
+        return 4;
       default:
         return 3;
     }
@@ -49,8 +51,7 @@ const Navbar = () => {
     Buttonref.current = this;
   };
   const handleScroll = () => {
-    if(Buttonref.current == undefined)
-      return;
+    if (Buttonref.current == undefined) return;
     let right = Buttonref.current.getBoundingClientRect().left;
     setpos({
       right: right,
@@ -59,18 +60,16 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    if(Buttonref.current == null || Buttonref == null)
-      return;
-    else{
-      console.log(Buttonref.current)
+    if (Buttonref.current == null || Buttonref == null) return;
+    else {
+      console.log(Buttonref.current);
       handleScroll();
-      window.addEventListener("resize", handleScroll);  
+      window.addEventListener("resize", handleScroll);
     }
   }, [Click]);
 
   useEffect(() => {
-    if(Buttonref.current == null || Buttonref == null)
-    return;
+    if (Buttonref.current == null || Buttonref == null) return;
 
     setTimeout(() => {
       handleScroll();
@@ -95,9 +94,13 @@ const Navbar = () => {
       name: "Events",
     },
     {
-      to: '/leetcode',
-      name: "Leetcode Rankings"
-    }
+      to: "/leetcode",
+      name: "Leetcode Rankings",
+    },
+    {
+      to: "/resources",
+      name: "Resources",
+    },
   ];
 
   return (
