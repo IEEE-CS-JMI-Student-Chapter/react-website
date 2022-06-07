@@ -123,12 +123,10 @@ function ResourcesComponent() {
           {CurrentFile.item.selected && (
             <motion.div
               key={"file"}
-              initial={{ opacity: 0, x: -100, position: "absolute" }}
+              initial={{ opacity: 0, x: -100 }}
               animate={{
                 opacity: 1,
                 x: 0,
-                width: "100%",
-                position: "relative",
               }}
               exit={{
                 opacity: 0,
@@ -141,7 +139,9 @@ function ResourcesComponent() {
               }}
               transition={{
                 duration: 0.5,
-                delay: 1,
+              }}
+              style={{
+                minHeight: "90vh",
               }}
             >
               <div className={styles.header}>
@@ -189,19 +189,18 @@ function ResourcesComponent() {
               animate={{
                 opacity: 1,
                 x: 0,
-                width: "80vw",
+                width: "100%",
               }}
               exit={{
                 opacity: 0,
                 x: 100,
-                position: "absolute",
                 transition: {
                   duration: 0.5,
                 },
               }}
               transition={{
                 duration: 0.5,
-                delay: 1,
+                delay: 0.5,
               }}
               style={{
                 width: "100%",
