@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles.module.scss";
 function Card({ data, type, onClick }) {
+  console.log(data);
   if (type === "file") {
     return (
       <div className={styles.card}>
@@ -19,7 +20,13 @@ function Card({ data, type, onClick }) {
               ></path>
             </svg>
           </div>
-          <h5>{data.title}</h5>
+          <div>
+            <h5>{data.title}</h5>
+            <div>
+              <span className={styles.tag}>{data?.by}</span>
+              <span className={styles.date}>{data?.date}</span>
+            </div>
+          </div>
         </div>
         <p onClick={() => onClick()}>Read More</p>
       </div>

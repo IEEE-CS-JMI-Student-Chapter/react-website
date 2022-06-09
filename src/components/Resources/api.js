@@ -5,7 +5,7 @@ const api = axios.create({
 });
 
 export const getResources = async () => {
-  const { data } = await api.get(`/`);
+  const { data } = await api.get(`/index.json`);
 
   return data;
 };
@@ -24,5 +24,22 @@ export const getFile = async (path) => {
 
   console.log(res);
 
-  return res.data;
+  const file = removeYAMLBlock(res.data);
+
+  return file;
+};
+
+const removeYAMLBlock = (file) => {
+  let lines = file.split("\n");
+  if (lines[0] === "---") {
+    lines = lines.slice(1);
+
+    while (lines[0] !== "---") {
+      lines = lines.slice(1);
+    }
+
+    lines = lines.slice(1);
+  }
+
+  return lines.join("\n");
 };
