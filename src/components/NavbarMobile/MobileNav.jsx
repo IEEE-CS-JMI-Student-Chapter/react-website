@@ -13,10 +13,10 @@ const MobileNav = () => {
         Teams
       </NavItem>
       <NavItem
-        to="/events"
+        to="/resources"
         icon={<FontAwesomeIcon icon={icons.faCalendarAlt} />}
       >
-        Events
+        Resources
       </NavItem>
       <NavItem to="/leetcode" icon={<FontAwesomeIcon icon={icons.faCode} />}>
         Leetcode

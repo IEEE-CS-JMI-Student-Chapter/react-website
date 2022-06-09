@@ -77,6 +77,10 @@
     padding: 5px 15px;
     border-radius: 50px;
   }
+
+  .description {
+    display: flex;
+  }
 }
 
 .markdown {
@@ -113,5 +117,35 @@
     width: 100%;
     height: 400px;
     object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90vw;
+  }
+  .card {
+    width: 100%;
+
+    .cardbody {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .description {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tag {
+      margin-left: 0px;
+      text-align: center;
+    }
+
+    .date {
+      margin: 0px;
+      text-align: center;
+    }
   }
 }

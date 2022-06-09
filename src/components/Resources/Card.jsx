@@ -22,7 +22,7 @@ function Card({ data, type, onClick }) {
           </div>
           <div>
             <h5>{data.title}</h5>
-            <div>
+            <div className={styles.description}>
               <span className={styles.tag}>{data?.by}</span>
               <span className={styles.date}>{data?.date}</span>
             </div>
