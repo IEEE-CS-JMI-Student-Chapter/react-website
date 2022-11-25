@@ -7,7 +7,7 @@ import "./styles.css";
 import MobileNav from "./components/NavbarMobile/MobileNav";
 import ScrollToTop from "./helpers/ScrollToTop";
 import Footer from "./components/Footer/Footer";
-import getEvents from "./Functions/getEvents";
+import getEvents from "./functions/getEvents";
 import SingleEvent from "./components/Events/SingleEvent";
 import Success from "./components/sucess/success";
 import loading from "./images/Loading.gif";

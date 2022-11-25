@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import style from "./singleevent.module.css";
 import loading from "../../images/Loading.gif";
-import getSingleEvent from "../../Functions/SingleEvent"
+import getSingleEvent from "../../functions/SingleEvent";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 

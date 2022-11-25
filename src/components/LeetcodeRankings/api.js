@@ -1,12 +1,20 @@
 import axios from "axios";
 import { faker } from "@faker-js/faker";
+import { httpsCallable } from "firebase/functions";
+import { functions } from "../../firebase";
+
 
 const API = "https://ieeecs-backend.herokuapp.com";
 // const API = "http://localhost:5000";
 
 export const addRanks = async (formData) => {
   console.log("formData : ", formData);
-  const { data } = await axios.post(`${API}/lc/add`, formData);
+
+
+  const addRankAPI = httpsCallable(functions, "addUser");
+
+
+  const { data } = await addRankAPI(formData);
 
   console.log(data);
 
@@ -14,13 +22,18 @@ export const addRanks = async (formData) => {
 };
 
 export const getRanks = async () => {
-  const { data } = await axios.get(`${API}/lc/ranks`);
 
+
+  const getRankAPI = httpsCallable(functions, "getRanks");
+
+  const { data } = await getRankAPI();
   console.log(data);
+
+
   return {
     data: data.data,
-    lastUpdated: data.lastUpdated,
-    timeleft: 125 - data.timeleft,
+    lastUpdated: data?.lastUpdated,
+    timeleft: 125 - data?.timeleft,
   };
 };
 

@@ -12,7 +12,7 @@ function AddForm() {
     email: "",
     username: "",
     branch: "CSE",
-    year: "I",
+    year: 2024,
   });
 
   const history = useHistory();
@@ -123,7 +123,7 @@ function AddForm() {
               handleChange(e, "year");
             }}
           >
-            {["I", "II", "III", "IV"].map((item) => {
+            {[2021,2022, 2023, 2024, 2026, 2027,2028].map((item) => {
               return <option value={item}>{item}</option>;
             })}
           </select>
